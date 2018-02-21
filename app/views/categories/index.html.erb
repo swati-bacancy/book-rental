@@ -1,0 +1,22 @@
+<div class="col-md-6"> 
+  <div class="boxed-section request-form">
+    <h2 class="section-title text-center">Listing of Category</h2>
+    <%= link_to 'Add Category', new_category_path%>
+    <table border="1">
+      <tr>
+        <th>Category name</th>
+        <th>Show</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <% @categories.each do |category|%>
+      <tr>
+        <td><%= category.category_name %></td>
+        <td><%= link_to "Show", category_path(category) %></td> 
+        <td><%= link_to "Edit", edit_category_path(category)%></td>
+        <td><%= link_to "Delete", category_path(category) , method: :delete %></td>
+      </tr>
+      <%end%>
+    </table>
+  </div>
+</div>

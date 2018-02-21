@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="site-content">
+      <header class="site-header" >
+        <div class="primary-header">
+          <div class="container">
+            <a href="index.html" id="branding">
+              <%= image_tag 'logo.png'%>
+              <h1 class="site-title">BOOK REANTAL</h1>
+            </a> <!-- #branding -->
+            
+      <!-- .main-navigation -->
+
+            <div class="mobile-navigation"></div>
+
+          </div> <!-- .container -->
+          
+        </div> <!-- .primary-header -->
+<!-- .home-slider -->
+
+      </header>
+    <%= yield %>
+    
+    </div>
+  </body>
+</html>

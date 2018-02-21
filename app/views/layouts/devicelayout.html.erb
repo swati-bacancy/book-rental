@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+    <div id="site-content">
+      <header class="site-header" >
+        <div class="primary-header">
+           <a href="index.html" id="branding">
+              <%= image_tag 'logo.png'%>
+              <h1 class="site-title">BOOK REANTAL</h1>
+            </a>
+          <div class="container">
+            <!-- #branding -->
+            
+            <div class="main-navigation">
+              <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+              <ul class="menu">
+                <li class="menu-item current-menu-item"><%= link_to 'Buy', books_path %></a></li>
+                <li class="menu-item"><%= link_to 'Add Book', books_viewallbooks_path %></a></li>
+               
+                <li class="menu-item"><%= link_to 'placed order', orders_path%></a></li>
+                 <li class="menu-item"><%= link_to 'Add category' ,categories_path%></a></li>
+                 <li class="menu-item"><%= link_to 'Address' ,addresses_path%></a></li>
+                
+                <li class="menu-item"><%= link_to 'Signout', destroy_person_session_path , method: :delete %></li>
+
+                <li class="menu-item"><%= link_to current_person.email %></li>
+              </ul> <!-- .menu -->
+            </div> <!-- .main-navigation -->
+
+            <div class="mobile-navigation"></div>
+
+          </div> <!-- .container -->
+          
+        </div> <!-- .primary-header -->
+<!-- .home-slider -->
+
+      </header>
+    <%= yield %>
+    
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+
+    <h2 class="section-title text-center">View books</h2>
+    <%= link_to 'Add Book', new_book_path%>
+    <table border="1">
+      <tr>
+        <th>Book name</th>
+        <th>author name</th>
+        <th>book_price</th>
+        <th>category</th>
+        <th>book language</th>
+        <th>book publish year</th>
+        <th>book publisher name</th>
+        <th>duration of giving_book</th>
+        <th>Book price for rent</th>
+        <th>Show</th>
+        <th>Edit</th>
+        <th>delete</th>
+        <th>Status</th>
+        <th>Order detail</th>
+     </tr>
+     <% @books.each do |book| %>
+      <tr>
+        <td><%= book.book_name%></td>
+        <td><%= book.book_name%></td>
+        <td><%= book.book_price%></td>
+        <td><%= Category.find(book.category_id).category_name%></td>
+        <td><%= book.book_language%></td>
+        <td><%= book.book_publish_year%></td>
+        <td><%= book.book_publisher_name%></td>
+        <td><%= book.duration_of_giving_book%></td>
+        <td><%= book.book_price_for_rent%></td>
+        <td><%= link_to 'show', book_path(book)%></td>
+        <td><%= link_to 'Edit', edit_book_path(book)%></td>
+        <td><%= link_to 'Delete', book_path(book),method: :delete%></td>
+        <%if book.status==true%>
+          <td>Buy</td>
+        <%else%>
+          <td>sold out</td>
+        <%end%>
+
+
+
+        <%if book.status==false%>
+          <td><%= link_to "Order Detail", order_path(book)%></td>
+        <%else%>
+          <td></td>
+        <%end%>
+
+
+      </tr>
+     <%end%>
+    </table>
+
+
+  

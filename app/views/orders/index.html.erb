@@ -1,0 +1,28 @@
+<div class="boxed-section request-form">
+    <h2 class="section-title text-center">Order Detail</h2>
+    <table border="1">
+      <tr>
+        <th>Serial number</th>
+        <th>Book Name</th>
+        <th>View Book Detail</th>
+        <th>View Order Detail </th>
+        <th>View Person Detail</th>
+        <th>status</th> 
+        <th>cancel</th>
+     </tr>
+     <% @orders.each_with_index do |order, index| %>
+
+       
+      <tr>
+       <td><%= index+1 %></td>
+        <td><%= order.book.book_name%></td>
+        <td><%= link_to "view book detail",  book_path(order.book) %></td>
+        <td><%= link_to "view address detail", address_path(order.address)%></td>
+        <td><%= link_to "view person detail",person_session_path(order.person)%></td>
+        <td><%=order.order_status%>
+        <td><%= link_to "cancel order" ,order_path(order), method: :delete %>
+      </tr>
+      
+     <%end%>
+    </table>
+  </div>

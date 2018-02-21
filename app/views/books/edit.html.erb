@@ -1,0 +1,37 @@
+<div class="col-md-6"> 
+  <div class="boxed-section request-form">
+    <h2 class="section-title text-center">Edit Book</h2>
+    <%= form_for @book do |form|%>
+      <%=form.label :book_name %>
+      <%=form.text_field :book_name%>
+
+      <%=form.label :author_name %>
+      <%=form.text_field :author_name%>
+
+      <%=form.label :book_price %>
+      <%=form.text_field :book_price%>
+
+      <%=form.label :category %>
+      <%category_array=Category.all.map{|category| [category.category_name]} %>
+        <%=form.collection_select:category_id,Category.order(:id),:id,:category_name %>
+
+      <%=form.label :book_language %>
+      <%=form.text_field :book_language%>
+
+      <%=form.label :book_publish_year %>
+      <%=form.date_field :book_publish_year%>
+
+      <%=form.label :book_publisher_name %>
+      <%=form.text_field :book_publisher_name%>
+
+      <%=form.label :duration_of_giving_book %>
+      <%=form.date_field :duration_of_giving_book %>
+
+      <%=form.label :book_price_for_rent %>
+      <%=form.text_field :book_price_for_rent %>
+
+      <%= form.submit %>
+
+    <%end%>
+  </div>
+</div>

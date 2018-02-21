@@ -1,0 +1,15 @@
+current directory: /home/swati/Desktop/ruby project/demo/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+/usr/share/rvm/rubies/ruby-2.4.1/bin/ruby -r ./siteconf20180219-11095-ofb674.rb extconf.rb
+creating Makefile
+
+current directory: /home/swati/Desktop/ruby project/demo/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /home/swati/Desktop/ruby project/demo/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: /home/swati/Desktop/ruby project/demo/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -m 0755 cruby.so ./.gem.20180219-11095-12jt025/bindex

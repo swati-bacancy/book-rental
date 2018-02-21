@@ -1,0 +1,122 @@
+
+  <h2 class="section-title text-center">Book Detail </h2>
+  <% if @order.order_status=="placed"%>
+    <%= link_to "confirm" ,final_confirm_path(@order.id)%>
+  <%else%>
+    <p>You can alredy confirm the order</p>
+    <%= link_to "cancel order"%>
+  <%end%> 
+  <div class="boxed-section request-form">
+    <p>
+      Book name:
+      <%= @order.book.book_name %>
+    </p>
+
+    <p>
+      Author name:
+      <%= @order.book.author_name %>
+    </p>
+
+    <p>
+      Book price:
+      <%= @order.book.book_price %>
+    </p>
+
+    <p>
+      Book language:
+      <%= @order.book.book_language %>
+    </p>
+    <p>
+      Book publish year:
+      <%= @order.book.book_publish_year %>
+    </p>
+    <p>
+      Book publisher_name:
+      <%= @order.book.book_publisher_name %>
+    </p>
+    <p>
+      Book price_for_rent:
+      <%= @order.book.book_price_for_rent %>
+    </p>
+    <p>
+      Duration of giving book:
+      <%= @order.book.duration_of_giving_book %>
+    </p>
+     <p>
+      category name
+      <%= Category.find(@order.book.category_id).category_name %>
+    </p>
+
+  </div>
+
+
+<h2 class="section-title text-center">Address detail</h2>
+  <div class="boxed-section request-form">
+    
+    <p>
+      Full Name:
+      <%= @order.address.full_name %>
+    </p>
+
+    <p>
+      Address Line 1
+      <%= @order.address.address_line1 %>
+    </p>
+
+    <p>
+      Address Line 2:
+      <%= @order.address.address_line2 %>
+    </p>
+
+    <p>
+      City:
+      <%= @order.address.city %>
+    </p>
+    <p>
+      State:
+      <%= @order.address.state %>
+    </p>
+    <p>
+      Country:
+      <%= @order.address.country %>
+    </p>
+    <p>
+      Pincode:
+      <%=@order.address.pincode %>
+    </p>
+  </div>
+
+
+
+<h2 class="section-title text-center">Person detail</h2>
+  <div class="boxed-section request-form">
+    
+    <p>
+      name:
+      <%= @order.person.user_name %>
+    </p>
+
+    <p>
+      email id:
+      <%= @order.person.email%>
+    </p>
+
+    <p>
+      Address Line 2:
+      <%= @order.address.address_line2 %>
+    </p>
+
+    <p>
+      Gender:
+      <%= @order.person.gender %>
+    </p>
+    <p>
+      Contact number:
+      <%= @order.person.contact_number %>
+    </p>
+  </div>
+
+
+
+
+  

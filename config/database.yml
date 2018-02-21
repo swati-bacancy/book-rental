@@ -1,0 +1,26 @@
+# This file is not normally versioned in git, but we have versioned it in order to enable
+# a larger-than-default connection pool in production.
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: bookrental_dev
+  username: swati
+  password: swati123
+
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: bookrental_test
+  username: swati
+  password: swati123
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: bookrental_prod
+  username: swati
+  password: swati123

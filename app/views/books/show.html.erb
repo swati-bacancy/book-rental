@@ -1,0 +1,47 @@
+<div class="col-md-6"> 
+  <div class="boxed-section request-form">
+    <h2 class="section-title text-center">Listing of Category</h2>
+    <p>
+      Book name:
+      <%= @book.book_name %>
+    </p>
+
+    <p>
+      Author name:
+      <%= @book.author_name %>
+    </p>
+
+    <p>
+      Book price:
+      <%= @book.book_price %>
+    </p>
+
+    <p>
+      Book language:
+      <%= @book.book_language %>
+    </p>
+    <p>
+      Book publish year:
+      <%= @book.book_publish_year %>
+    </p>
+    <p>
+      Book publisher_name:
+      <%= @book.book_publisher_name %>
+    </p>
+    <p>
+      Book price_for_rent:
+      <%= @book.book_price_for_rent %>
+    </p>
+    <p>
+      Duration of giving book:
+      <%= @book.duration_of_giving_book %>
+    </p>
+     <p>
+      category name
+      <%= Category.find(@book.category_id).category_name %>
+    </p>
+    
+
+    <%= link_to "back",  books_path %>
+  </div>
+</div>

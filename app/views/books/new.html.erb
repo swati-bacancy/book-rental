@@ -1,0 +1,64 @@
+<div class="col-md-6"> 
+  <div class="boxed-section request-form">
+    <h2 class="section-title text-center">Create Category</h2>
+    <%= form_for @book do |form|%>
+      <%=form.label :book_name %>
+      <%=form.text_field :book_name%>
+
+      <%=form.label :author_name %>
+      <%=form.text_field :author_name%>
+
+      <%=form.label :book_price %>
+      <%=form.text_field :book_price%>
+
+      <%=form.label :category %>
+      <%category_array=Category.all.map{|category| [category.category_name]} %>
+        <%=form.collection_select:category_id,Category.order(:id),:id,:category_name %>
+
+      <%=form.label :book_language %>
+      <%=form.text_field :book_language%>
+
+      <%=form.label :book_publish_year %>
+      <%=form.date_field :book_publish_year%>
+
+      <%=form.label :book_publisher_name %>
+      <%=form.text_field :book_publisher_name%>
+
+      <%=form.label :duration_of_giving_book %>
+      <%=form.date_field :duration_of_giving_book %>
+
+      <%=form.label :book_price_for_rent %>
+      <%=form.text_field :book_price_for_rent %>
+</div>
+ 
+  <div class="boxed-section request-form"> 
+    <h2 class="section-title text-center">View Addresses</h2>
+    <table border="1">
+      <tr>
+        <th>Current Address</th>
+        <th>Full Name:</th>
+        <th>Address Line 1</th>
+        <th>Address Line 2</th>
+        <th>city</th>
+        <th>state</th>
+        <th>country</th>
+        <th>Pincode</th>
+     </tr>
+     <% @addresses.each do |address| %>
+      <tr>
+        <td><%= form.radio_button :address_id, address.id %>  </td>
+        <td><%= address.full_name%></td>
+        <td><%= address.address_line1%></td>
+        <td><%= address.address_line2%></td>
+        <td><%= address.city%></td>
+        <td><%= address.state%></td>
+        <td><%= address.country%></td>
+        <td><%= address.pincode%></td>
+      </tr>
+     <%end%>
+    </table>
+     <%= form.submit %>
+    <%end%>
+
+  </div>
+</div>
