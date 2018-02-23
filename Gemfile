@@ -13,13 +13,14 @@ gem 'city-state'
 gem 'pg', '~> 0.20'
 gem 'devise'
 
-
+gem 'rolify'
+gem 'cancancan'
 gem 'stripe'
 
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
-# Use SCSS for stylesheets
+# Use SCSS for styleshemets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

@@ -1,7 +1,20 @@
 <div class="col-md-6"> 
   <div class="boxed-section request-form">
-    <h2 class="section-title text-center">Create Category</h2>
+    <h2 class="section-title text-center">Create Book</h2>
     <%= form_for @book do |form|%>
+      <% if @book.errors.any? %>
+        <div id="error_explanation">
+           <h2><%= pluralize(@book.errors.count, "error") %> prohibited this message from being saved:</h2>
+           <ul>
+             <% @book.errors.full_messages do |msg| %>
+             <% #Should have been: @location.errors.full_messages.each do |msg| %>
+             <li>
+               <%= msg %>
+             </li>
+             <% end %>
+           </ul>
+        </div>
+      <% end %>
       <%=form.label :book_name %>
       <%=form.text_field :book_name%>
 
@@ -29,7 +42,7 @@
 
       <%=form.label :book_price_for_rent %>
       <%=form.text_field :book_price_for_rent %>
-</div>
+  </div>
  
   <div class="boxed-section request-form"> 
     <h2 class="section-title text-center">View Addresses</h2>
@@ -57,8 +70,7 @@
       </tr>
      <%end%>
     </table>
-     <%= form.submit %>
-    <%end%>
-
+    <%= form.submit %>
+  <%end%>
   </div>
 </div>

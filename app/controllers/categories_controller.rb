@@ -1,5 +1,8 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_person!
+
+  load_and_authorize_resource
+
   layout "devicelayout"
   def new
     @category=Category.new

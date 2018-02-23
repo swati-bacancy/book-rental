@@ -1,131 +1,46 @@
-<center>
+
   <h1>Details Of Book and Address</h1>
   <h3>
     <%=link_to 'confirm order',orders_path(:order => { :book_id => @book.id, :address_id => @address.id }), method: :post %>
-  <%= link_to 'cancel', books_path%></h3>
-
-  <h1>Buyer Detail</h1>
- <div class="col-md-6"> 
-  <div class="boxed-section request-form">
+    <%= link_to 'cancel', books_path%></h3>
+    <h1>Buyer Detail</h1>
+    <div class="col-md-6"> 
+      <div class="boxed-section request-form">
     <h2 class="section-title text-center">Book Detail</h2>
-    <p>
-      Book name:
-      <%= @book.book_name %>
-    </p>
-
-    <p>
-      Author name:
-      <%= @book.author_name %>
-    </p>
-
-    <p>
-      Book price:
-      <%= @book.book_price %>
-    </p>
-
-    <p>
-      Book language:
-      <%= @book.book_language %>
-    </p>
-    <p>
-      Book publish year:
-      <%= @book.book_publish_year %>
-    </p>
-    <p>
-      Book publisher_name:
-      <%= @book.book_publisher_name %>
-    </p>
-    <p>
-      Book price_for_rent:
-      <%= @book.book_price_for_rent %>
-    </p>
-    <p>
-      Duration of giving book:
-      <%= @book.duration_of_giving_book %>
-    </p>
-     <p>
-      category name
-      <%= Category.find(@book.category_id).category_name %>
-    </p>
+    <p> Book name: <%= @book.book_name %> </p>
+    <p> Author name: <%= @book.author_name %> </p>
+    <p> Book price: <%= @book.book_price %> </p>
+    <p> Book language: <%= @book.book_language %> </p>
+    <p> Book publish year: <%= @book.book_publish_year %> </p>
+    <p> Book publisher_name: <%= @book.book_publisher_name %> </p>
+    <p> Book price_for_rent: <%= @book.book_price_for_rent %> </p>
+    <p> Duration of giving book: <%= @book.duration_of_giving_book %> </p>
+    <p> category name <%= Category.find(@book.category_id).category_name %> </p>
     <br>
   </div>
 </div>
-
 
 <div class="col-md-6"> 
   <div class="boxed-section request-form">
     <h2 class="section-title text-center">Address Detail</h2>
-    <p>
-      Full Name:
-      <%= @address.full_name %>
-    </p>
-
-    <p>
-      Address Line 1
-      <%= @address.address_line1 %>
-    </p>
-
-    <p>
-      Address Line 2:
-      <%= @address.address_line2 %>
-    </p>
-
-    <p>
-      City:
-      <%= @address.city %>
-    </p>
-    <p>
-      State:
-      <%= @address.state %>
-    </p>
-    <p>
-      Country:
-      <%= @address.country %>
-    </p>
-    <p>
-      Pincode:
-      <%= @address.pincode %>
-    </p>
-    <br>
-    <br>
-    <br>
-    <br>  
+    <p>Full Name: <%= @address.full_name %> </p>
+    <p>Address Line 1: <%= @address.address_line1 %></p>
+    <p>Address Line 2: <%= @address.address_line2 %></p>
+    <p>City: <%= @address.city %> </p>
+    <p>State: <%= @address.state %> </p>
+    <p>Country:<%= @address.country %></p>
+    <p>Pincode:<%= @address.pincode %></p> 
   </div>
 </div>
-
 
 <h1>seller Detail</h1>
-
 <div class="col-md-6"> 
- 
   <div class="boxed-section request-form">
-    <h2 class="section-title text-center">Person detail</h2>
-    
-    <p>
-      name:
-      <%= @sellerDetail.user_name %>
-    </p>
-
-    <p>
-      email id:
-      <%= @sellerDetail.email%>
-    </p>
-
-    <p>
-      Gender:
-      <%= @sellerDetail.gender %>
-    </p>
-    <p>
-      Contact number:
-      <%= @sellerDetail.contact_number %>
-    </p>
-    <br>
-    <br>
-    <br>
-    <br> 
-    <br>
-    <br>
-     
+    <h2 class="section-title text-center">Person detail</h2> 
+    <p>name:<%= @sellerDetail.user_name %></p>
+    <p>email id:<%= @sellerDetail.email%></p>
+    <p>Gender:<%= @sellerDetail.gender %></p>
+    <p>Contact number:<%= @sellerDetail.contact_number %></p> 
   </div>
 </div>
 
@@ -133,37 +48,13 @@
 <div class="col-md-6"> 
   <div class="boxed-section request-form">
     <h2 class="section-title text-center">Address Detail</h2>
-    <p>
-      Full Name:
-      <%= @sellerAddressDetail.full_name %>
-    </p>
-
-    <p>
-      Address Line 1
-      <%= @sellerAddressDetail.address_line1 %>
-    </p>
-
-    <p>
-      Address Line 2:
-      <%= @sellerAddressDetail.address_line2 %>
-    </p>
-
-    <p>
-      City:
-      <%= @sellerAddressDetail.city %>
-    </p>
-    <p>
-      State:
-      <%= @sellerAddressDetail.state %>
-    </p>
-    <p>
-      Country:
-      <%= @sellerAddressDetail.country %>
-    </p>
-    <p>
-      Pincode:
-      <%= @sellerAddressDetail.pincode %>
-    </p>
+    <p>Full Name:<%= @sellerAddressDetail.full_name %></p>
+    <p>Address Line 1:<%= @sellerAddressDetail.address_line1 %></p>
+    <p>Address Line 2:<%= @sellerAddressDetail.address_line2 %></p>
+    <p>City:<%= @sellerAddressDetail.city %></p>
+    <p>State:<%= @sellerAddressDetail.state %></p>
+    <p>Country:<%= @sellerAddressDetail.country %></p>
+    <p>Pincode:<%= @sellerAddressDetail.pincode %></p>
     <br>
     <br> 
   </div>

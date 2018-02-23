@@ -1,27 +1,26 @@
 <table border="1">
-      <tr>
-        <th>Full Name:</th>
-        <th>Address Line 1</th>
-        <th>Address Line 2</th>
-        <th>city</th>
-        <th>state</th>
-        <th>country</th>
-        <th>Pincode</th>
-     </tr>
-     <% @addresses.each do |address| %>
-      <tr>
-        <td><%= address.full_name%></td>
-        <td><%= address.address_line1%></td>
-        <td><%= address.address_line2%></td>
-        <td><%= address.city%></td>
-        <td><%= address.state%></td>
-        <td><%= address.country%></td>
-        <td><%= address.pincode%></td>
-        <td><%= link_to "show", address_path(address)%></td>
-        <td><%= link_to "edit", edit_address_path(address)%></td>
-        <td><%= link_to "delete", address_path(address), method: :delete %></td>
-        
-        <td><%= link_to "confirm order",  address_path(address) %></td>
-      </tr>
-     <%end%>
-    </table>
+  <tr>
+    <th>Full Name:</th>
+    <th>Address Line 1</th>
+    <th>Address Line 2</th>
+    <th>city</th>
+    <th>state</th>
+    <th>country</th>
+    <th>Pincode</th>
+ </tr>
+ <% @addresses.each do |address| %>
+    <tr>
+      <td><%= address.full_name%></td>
+      <td><%= address.address_line1%></td>
+      <td><%= address.address_line2%></td>
+      <td><%= address.city%></td>
+      <td><%= address.state%></td>
+      <td><%= address.country%></td>
+      <td><%= address.pincode%></td>
+      <td><%= link_to "show", address_path(address)%></td>
+      <td><%= link_to "edit", edit_address_path(address)%></td>
+      <td><%= link_to "delete", address_path(address), method: :delete %></td> 
+      <td><%= link_to "confirm order",  address_path(address) %></td>
+    </tr>
+  <%end%>
+</table>

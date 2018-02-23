@@ -1,24 +1,35 @@
-<%= form_for @address do |form|%>
-      <%= form.label :Full_name%>
-      <%= form.text_field :full_name%>
+<%= form_for @address ,method: :post do |form|%>
+  <% if @address.errors.any? %>
+    <div id="error_explanation">
+       <h2><%= pluralize(@address.errors.count, "error") %> prohibited this message from being saved:</h2>
+       <ul>
+         <% @address.errors.full_messages do |msg| %>
+         <% #Should have been: @location.errors.full_messages.each do |msg| %>
+         <li>
+           <%= msg %>
+         </li>
+         <% end %>
+       </ul>
+    </div>
+  <% end %>
+  <%= form.label :Full_name%>
+  <%= form.text_field :full_name%>
 
-      <%= form.label :Address_line_1%>
-      <%= form.text_field :address_line1%>
+  <%= form.label :Address_line_1%>
+  <%= form.text_field :address_line1%>
 
-      <%= form.label :Address_line_1%>
-      <%= form.text_field :address_line2%>
+  <%= form.label :Address_line_1%>
+  <%= form.text_field :address_line2%>
 
-      <%= form.label :state%>
-      <%= form.select :state, CS.states(:in)%>
-      <%= form.label :country%>
-      <%= form.text_field :country%>
+  <%= form.label :state%>
+  <%= form.select :state, CS.states(:in)%>
 
-      <div id='city-list' remote: true>
-        <%= render partial: 'city_list'%> <%#= f.text_field :city %> 
-      </div>
-
-
-      <%= form.label :pincode%>
-      <%= form.text_field :pincode%>
-      <%= form.submit%>
+  <div id='city-list' remote: true>
+    <%= render partial: 'city_list'%> <%#= f.text_field :city %> 
+  </div>
+  <%= form.label :country%>
+  <%= form.text_field :country%>      
+  <%= form.label :pincode%>
+  <%= form.text_field :pincode%>
+  <%= form.submit%>
 <%end%>

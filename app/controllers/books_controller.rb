@@ -7,11 +7,15 @@ class BooksController < ApplicationController
   end
   def create
     @category=Category.find(params[:book][:category_id])
-    @person=Person.find_by(params[:book][:person_id])
+    @person=Person.find_by(params[:book][:person_id]) 
     @book=@category.books.create(book_params)
+    @addresses=Address.where(person_id:current_person.id)
     @book.person_id=current_person.id
-    @book.save
-    redirect_to books_viewallbooks_path   
+    if @book.save
+      redirect_to books_viewallbooks_path
+    else
+      render 'new'
+    end   
   end
   def viewallbooks
     @books=Book.where(person_id:current_person.id)
@@ -27,14 +31,12 @@ class BooksController < ApplicationController
       @cat=Category.find(@first_book)
     else
 =end
-
     if params[:category]==nil
       @books=Book.where(status: true)
     else
       @cat=Category.find_by(category_name: params[:category]) 
       @books=@books.search(params[:search],params[:author_search],@cat.id)
     end
-
     #@books=Book.where(person_id:current_person.)
   end
   def destroy
@@ -53,8 +55,6 @@ class BooksController < ApplicationController
       render 'edit'
     end
   end
-
-
   def near_by_me
     @address_of_current_person=Address.where(person_id: current_person.id).last
     @bookadress=Book.where(status: true)
@@ -81,11 +81,7 @@ class BooksController < ApplicationController
     distance.each do |i|
       @books_array.push(Book.find_by(address_id: i[0]))
     end
-end
-
-
-
-
+  end
   private
   def book_params
     params.require(:book).permit(:book_name, 

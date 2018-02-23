@@ -3,13 +3,16 @@ class AddressesController < ApplicationController
   def new 
     @address=Address.new
   end
+
   def create
     @address=Address.new(address_params)
     @address.person_id= current_person.id
-    @address.save
-    redirect_to addresses_path    
+    if @address.save
+      redirect_to addresses_path
+    else
+      render 'new'
+    end  
   end
-
 
   def index
     @addresses=Address.where(person_id:current_person.id)
@@ -19,33 +22,34 @@ class AddressesController < ApplicationController
     @address=Address.new
 
   end
+
   def viewaddress
     @addresses=Address.where(person_id:current_person.id)
     @book=Book.find(params[:id])
   end
 
-
   def show
     @address=Address.find(params[:id])
   end
+
   def edit
-    @address=Address.find(params[:id])
-   
+    @address=Address.find(params[:id])  
   end
+
   def update
     @address=Address.find(params[:id])
-     if @address.update(address_params)
+    if @address.update(address_params)
       redirect_to addresses_path
     else
       render 'edit'
     end
   end
+
   def destroy
     @address=Address.find(params[:id])
     @address.destroy
     redirect_to addresses_path 
   end
-
 
   def confirm_order
     @address=Address.find(params[:address_id])
@@ -53,11 +57,11 @@ class AddressesController < ApplicationController
     @sellerDetail=@book.person
     @sellerAddressDetail=@book.address
   end
+
   def change_city
     params[:state]
     @state = CS.states(:in).key(params[:state])
   end
-
 
   private
   def address_params
@@ -70,5 +74,4 @@ class AddressesController < ApplicationController
                                     :pincode, 
                                     :person_id)
   end
-
 end
