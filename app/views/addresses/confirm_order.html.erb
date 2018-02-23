@@ -4,7 +4,7 @@
     <%=link_to 'confirm order',orders_path(:order => { :book_id => @book.id, :address_id => @address.id }), method: :post %>
   <%= link_to 'cancel', books_path%></h3>
 
-
+  <h1>Buyer Detail</h1>
  <div class="col-md-6"> 
   <div class="boxed-section request-form">
     <h2 class="section-title text-center">Book Detail</h2>
@@ -47,9 +47,7 @@
       category name
       <%= Category.find(@book.category_id).category_name %>
     </p>
-    
-
-    <%= link_to "back",  books_path %>
+    <br>
   </div>
 </div>
 
@@ -88,10 +86,6 @@
       Pincode:
       <%= @address.pincode %>
     </p>
-
-    
-
-    <%= link_to "back",  addresses_path %>
     <br>
     <br>
     <br>
@@ -99,3 +93,78 @@
   </div>
 </div>
 
+
+<h1>seller Detail</h1>
+
+<div class="col-md-6"> 
+ 
+  <div class="boxed-section request-form">
+    <h2 class="section-title text-center">Person detail</h2>
+    
+    <p>
+      name:
+      <%= @sellerDetail.user_name %>
+    </p>
+
+    <p>
+      email id:
+      <%= @sellerDetail.email%>
+    </p>
+
+    <p>
+      Gender:
+      <%= @sellerDetail.gender %>
+    </p>
+    <p>
+      Contact number:
+      <%= @sellerDetail.contact_number %>
+    </p>
+    <br>
+    <br>
+    <br>
+    <br> 
+    <br>
+    <br>
+     
+  </div>
+</div>
+
+
+<div class="col-md-6"> 
+  <div class="boxed-section request-form">
+    <h2 class="section-title text-center">Address Detail</h2>
+    <p>
+      Full Name:
+      <%= @sellerAddressDetail.full_name %>
+    </p>
+
+    <p>
+      Address Line 1
+      <%= @sellerAddressDetail.address_line1 %>
+    </p>
+
+    <p>
+      Address Line 2:
+      <%= @sellerAddressDetail.address_line2 %>
+    </p>
+
+    <p>
+      City:
+      <%= @sellerAddressDetail.city %>
+    </p>
+    <p>
+      State:
+      <%= @sellerAddressDetail.state %>
+    </p>
+    <p>
+      Country:
+      <%= @sellerAddressDetail.country %>
+    </p>
+    <p>
+      Pincode:
+      <%= @sellerAddressDetail.pincode %>
+    </p>
+    <br>
+    <br> 
+  </div>
+</div>

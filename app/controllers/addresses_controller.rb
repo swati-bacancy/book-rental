@@ -50,6 +50,8 @@ class AddressesController < ApplicationController
   def confirm_order
     @address=Address.find(params[:address_id])
     @book=Book.find(params[:book_id])
+    @sellerDetail=@book.person
+    @sellerAddressDetail=@book.address
   end
   def change_city
     params[:state]

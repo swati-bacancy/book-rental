@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :books
   resources :addresses
   resources :orders
+  resources :charges
   
   resources :books do 
     resources :addresses do

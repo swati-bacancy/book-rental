@@ -8,7 +8,8 @@
     @address=Address.find(order_params[:address_id])
     @order = Order.new(order_params)
     @order.person_id=current_person.id
-    @order.order_status=0   
+    @order.order_status=0  
+    @order.paymentStatus=0   
     # @order=@book.create_order(order_params)
     @order.save
     @book.status=false
@@ -49,11 +50,11 @@
   def final_confirm
     @order=Order.find(params[:id])
     @order.order_status=1
-    @order.save
     @code=SecureRandom.hex(10)
+    @order.confirmationCode=@code
+    @order.save
     PersonMailer.confirm_order_email(@order.person,@code).deliver_now
     PersonMailer.confirm_order_email(current_person,@code).deliver_now
-
     redirect_to  books_viewallbooks_path 
   end
 

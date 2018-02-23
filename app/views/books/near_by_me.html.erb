@@ -37,19 +37,18 @@
         <th>Book price for rent</th>
         <th>Buy</th>
      </tr>
-     <%len= @books.length%>
-     <%len.times do |book|%>
+     <% @books_array.each do |book|%>
      <tr>
-        <td><%= @books[book][0].book_name%></td>
-        <td><%= @books[book][0].author_name%></td>
-        <td><%= @books[book][0].book_price%></td>
-        <td><%= Category.find(@books[book][0].category_id).category_name%></td>
-        <td><%= @books[book][0].book_language%></td>
-        <td><%= @books[book][0].book_publish_year%></td>
-        <td><%= @books[book][0].book_publisher_name%></td>
-        <td><%= @books[book][0].duration_of_giving_book%></td>
-        <td><%= @books[book][0].book_price_for_rent%></td>
-        <td><%= link_to 'Buy', viewaddress_path(@books[book][0]) %></td>
+        <td><%= book.book_name%></td>
+        <td><%= book.author_name%></td>
+        <td><%= book.book_price%></td>
+        <td><%= Category.find(book.category_id).category_name%></td>
+        <td><%= book.book_language%></td>
+        <td><%= book.book_publish_year%></td>
+        <td><%= book.book_publisher_name%></td>
+        <td><%= book.duration_of_giving_book%></td>
+        <td><%= book.book_price_for_rent%></td>
+        <td><%= link_to 'Buy', viewaddress_path(book) %></td>
      <%end%>
    </tr>  
     </table>

@@ -10,6 +10,8 @@
 
       <%= form.label :state%>
       <%= form.select :state, CS.states(:in)%>
+      <%= form.label :country%>
+      <%= form.text_field :country%>
 
       <div id='city-list' remote: true>
         <%= render partial: 'city_list'%> <%#= f.text_field :city %> 

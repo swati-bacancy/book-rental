@@ -3,4 +3,5 @@ class Order < ApplicationRecord
   belongs_to :person
   belongs_to :address
   enum order_status:[:placed,:confirmed]
+  enum paymentStatus:[:pending,:paid]
 end

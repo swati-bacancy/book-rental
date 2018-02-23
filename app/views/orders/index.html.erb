@@ -9,6 +9,7 @@
         <th>View Person Detail</th>
         <th>status</th> 
         <th>cancel</th>
+        <th>payment</th>
      </tr>
      <% @orders.each_with_index do |order, index| %>
 
@@ -21,6 +22,27 @@
         <td><%= link_to "view person detail",person_session_path(order.person)%></td>
         <td><%=order.order_status%>
         <td><%= link_to "cancel order" ,order_path(order), method: :delete %>
+        <%if order.order_status == "confirmed"%>
+          <td>   
+            <%= form_tag charges_path do %>
+              <article>
+                <% if flash[:error].present? %>
+                  <div id="error_explanation">
+                    <p><%= flash[:error] %></p>
+                  </div>
+                <% end %>
+                
+              </article>
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="A month's subscription"
+              data-amount="500"
+              data-locale="auto"></script>
+            <% end %>
+          </td>
+        <%else%>
+          <td></td>
+        <%end%>
       </tr>
       
      <%end%>

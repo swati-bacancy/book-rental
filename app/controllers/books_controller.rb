@@ -64,100 +64,24 @@ class BooksController < ApplicationController
       @address=Address.find(address)
       @arr<<@address
     end
-      
- 
-
-
-
-
-
-
-
-
     @a=Array.new
     @arr=@arr.uniq
     @arr.each do |i|
        b= @address_of_current_person.distance_to([i.latitude,i.longitude])  
        @a.push(b)
     end
-
-
-
     distance=Hash.new
     len=@arr.length
     len.times do |i|
       @add=@arr[i].id
       distance[@add] = @a[i]
     end
-
-    distance_array=distance.values
-    address_array=distance.keys
-
-    if address_array.length==1
-
-    else
-=begin
-address_array.each do |t|
-      i=0
-       address_array.each do |b|
-         if b > address_array[i+1]
-          address_array[i],address_array[i+1] = address_array[i+1],address_array[i]
-          distance_array[i],distance_array[i+1] = distance_array[i+1],distance_array[i]
-         end
-         i+=1 if i < address_array.size-2
-       end
-      end
-=end
-=begin
-        address_array.each do |t|
-          address_array.each do |b|
-            if (t > b) 
-                a =  address_array[t];
-                address_array[t] = address_array[b];
-                address_array[b] = a;
-
-                c =  distance_array[t];
-                distance_array[t] = distance_array[b];
-                distance_array[b] = c;
-            end
-          end
-        end
-=end
-  address_array.each do |i|                    #Loop for ascending ordering
-    address_array.each do |j|            #Loop for comparing other values
-      if address_array[j] > address_array[i]                #Comparing other array elements
-       tmp = address_array[i]       #Using temporary variable for storing last value
-        address_array[i] = address_array[j]           #replacing value
-        address_array[j] = tmp           #storing last value
-      end
+    distance=distance.sort {|a,b| a[1]<=>b[1]}
+    @books_array=Array.new 
+    distance.each do |i|
+      @books_array.push(Book.find_by(address_id: i[0]))
     end
-  end
-
-
-
-     end 
-
-
-    @books=Array.new
-    address_array.each do |i|
-      @books<<Book.where(address_id:i)
-
-    end
-
-=begin
-
-     @address=Array.new
-    @address_of_current_person=Address.where(person_id: current_person.id).last
-    @bookadress=Book.where(status: true)
-    @bookadress.each do |book|
-      @address[]=book.address
-    end
-    exit
-  
-=end
-
-
-  end
+end
 
 
 
