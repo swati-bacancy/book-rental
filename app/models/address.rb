@@ -3,6 +3,7 @@ class Address < ApplicationRecord
   has_one :order
   has_one :book
   validates :full_name, :address_line1, :address_line2, :city, :state, :country, :pincode, presence: true
+  validates :pincode ,length: { is: 6 }
 =begin
   geocoded_by :address
   after_validation geocoded, :if=>lambda{ |obj| obj.address_line1.changed? && obj.address_line2.changed? && obj.city.changed? && obj.state.changed? &&obj.pincode.changed?  }
