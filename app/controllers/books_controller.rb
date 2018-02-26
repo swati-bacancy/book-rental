@@ -57,15 +57,15 @@ class BooksController < ApplicationController
   end
   def near_by_me
     @address_of_current_person=Address.where(person_id: current_person.id).last
-    @bookadress=Book.where(status: true)
-    @bookadress=@bookadress.pluck(:address_id)
+    @books=Book.where(status: true)
+    @bookadress=@books.pluck(:address_id)
     @arr=Array.new
     @bookadress.each do |address|
       @address=Address.find(address)
       @arr<<@address
     end
     @a=Array.new
-    @arr=@arr.uniq
+    #@arr=@arr.uniq
     @arr.each do |i|
        b= @address_of_current_person.distance_to([i.latitude,i.longitude])  
        @a.push(b)
@@ -79,9 +79,32 @@ class BooksController < ApplicationController
     distance=distance.sort {|a,b| a[1]<=>b[1]}
     @books_array=Array.new 
     distance.each do |i|
-      @books_array.push(Book.find_by(address_id: i[0]))
+      @books_array.push(Book.where(address_id: i[0]))
     end
+
+    #
+
   end
+
+
+
+=begin
+  def flatten_array(nested_array, initial=[])
+    nested_array.each do |item|
+      if item.kind_of?(Array)
+        flatten_array(item, initial)
+      else
+        exit
+        initial.push item
+
+      end
+    end
+    initial
+    exit
+  end
+=end
+
+# Example of use
   private
   def book_params
     params.require(:book).permit(:book_name, 

@@ -1,24 +1,24 @@
 <table border="1">
-      <tr>
-        <th>Current Address</th>
-        <th>Full Name:</th>
-        <th>Address Line 1</th>
-        <th>Address Line 2</th>
-        <th>city</th>
-        <th>state</th>
-        <th>country</th>
-        <th>Pincode</th>
-     </tr>
-     <% @addresses.each do |address| %>
-      <tr>
-        <td><%= form.radio_button :address_id, address.id %>  </td>
-        <td><%= address.full_name%></td>
-        <td><%= address.address_line1%></td>
-        <td><%= address.address_line2%></td>
-        <td><%= address.city%></td>
-        <td><%= address.state%></td>
-        <td><%= address.country%></td>
-        <td><%= address.pincode%></td>
-      </tr>
-     <%end%>
-    </table>
+  <tr>
+    <th>Current Address</th>
+    <th>Full Name:</th>
+    <th>Address Line 1</th>
+    <th>Address Line 2</th>
+    <th>city</th>
+    <th>state</th>
+    <th>country</th>
+    <th>Pincode</th>
+  </tr>
+  <% @addresses.each do |address| %>
+    <tr>
+      <td><%= form.radio_button :address_id, address.id %>  </td>
+      <td><%= address.full_name%></td>
+      <td><%= address.address_line1%></td>
+      <td><%= address.address_line2%></td>
+      <td><%= address.city%></td>
+      <td><%= address.state%></td>
+      <td><%= address.country%></td>
+      <td><%= address.pincode%></td>
+    </tr>
+  <%end%>
+</table>

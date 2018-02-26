@@ -13,6 +13,7 @@ gem 'city-state'
 gem 'pg', '~> 0.20'
 gem 'devise'
 
+
 gem 'rolify'
 gem 'cancancan'
 gem 'stripe'

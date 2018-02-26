@@ -1,5 +1,4 @@
-
-  <h1>Details Of Book and Address</h1>
+` <h1>Details Of Book and Address</h1>
   <h3>
     <%=link_to 'confirm order',orders_path(:order => { :book_id => @book.id, :address_id => @address.id }), method: :post %>
     <%= link_to 'cancel', books_path%></h3>
