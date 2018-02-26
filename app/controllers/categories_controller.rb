@@ -1,15 +1,14 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_person!
+  load_and_authorize_resource
   layout "devicelayout"
   def new
     @category=Category.new
   end
-
   def create
     @category=Category.new(category_params)
     @category.save
     redirect_to categories_path 
-
   end
   def show
      @category=Category.find(params[:id])
@@ -22,7 +21,6 @@ class CategoriesController < ApplicationController
     @category.destroy
     redirect_to categories_path
   end
-
   def edit
     @category=Category.find(params[:id])
   end

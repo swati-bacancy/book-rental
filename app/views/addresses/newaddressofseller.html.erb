@@ -1,28 +1,6 @@
 <div class="col-md-6"> 
   <div class="boxed-section request-form">
     <h2 class="section-title text-center">Enter Your Address</h2>
-    <%= form_for @address ,method: :post do |form|%>
-      <%= form.label :Full_name%>
-      <%= form.text_field :full_name%>
-
-      <%= form.label :Address_line_1%>
-      <%= form.text_field :address_line1%>
-
-      <%= form.label :Address_line_1%>
-      <%= form.text_field :address_line2%>
-
-      <%= form.label :city%>
-      <%= form.text_field :city%>
-
-      <%= form.label :state%>
-      <%= form.text_field :state%>
-
-      <%= form.label :country%>
-      <%= form.text_field :country%>
-
-      <%= form.label :pincode%>
-      <%= form.text_field :pincode%>
-      <%= form.submit%>
-<%end%>
+    <%= render "addaddress"%>
   </div>
 </div>

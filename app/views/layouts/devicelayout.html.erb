@@ -27,7 +27,9 @@
                 <li class="menu-item"><%= link_to 'Add Book', books_viewallbooks_path %></a></li>
                
                 <li class="menu-item"><%= link_to 'placed order', orders_path%></a></li>
+                <%if current_person.has_role? :admin%>
                  <li class="menu-item"><%= link_to 'Add category' ,categories_path%></a></li>
+                <%end%>
                  <li class="menu-item"><%= link_to 'Address' ,addresses_path%></a></li>
                 
                 <li class="menu-item"><%= link_to 'Signout', destroy_person_session_path , method: :delete %></li>

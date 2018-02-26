@@ -1,55 +1,47 @@
 <div class="boxed-section request-form" >
-    <h2 class="section-title text-center">View books</h2>
-    <p>
-      
-      <%= form_tag  books_path , :method => 'get' do %>
+  <h2 class="section-title text-center">View books</h2>
+  <p>    
+    <%= form_tag  books_path , :method => 'get' do %>
       <%= label_tag :seach_by_book_name%>
       <%category_array= Category.all.map{|category| [category.category_name]}%>
-      <%= select_tag "category", options_for_select(category_array), { "style" => "width:200px"} %>
-
-      
-        <%= label_tag :seach_by_book_name%>
-        <%= text_field_tag :search, params[:search], options = {style:"width:200px"} %>
-    
-        <%= label_tag :seach_by_author_name%>
-        <%= text_field_tag :author_search, params[:author_search], options = {style:"width:200px"} %>
-        <%= submit_tag("search", :style => "width:100px;") %>
-        <%end%>
-      </p>
-      <%= button_to "near me",  near_by_me_path , method: :get, style:"width:200px"  %>
-
-
-
-
-
-
-
-    <table border="1">
-      <tr>
-        <th>Book name</th>
-        <th>author name</th>
-        <th>book_price</th>
-        <th>category</th>
-        <th>book language</th>
-        <th>book publish year</th>
-        <th>book publisher name</th>
-        <th>duration of giving_book</th>
-        <th>Book price for rent</th>
-        <th>Buy</th>
-     </tr>
-     <% @books_array.each do |book|%>
-     <tr>
-        <td><%= book.book_name%></td>
-        <td><%= book.author_name%></td>
-        <td><%= book.book_price%></td>
-        <td><%= Category.find(book.category_id).category_name%></td>
-        <td><%= book.book_language%></td>
-        <td><%= book.book_publish_year%></td>
-        <td><%= book.book_publisher_name%></td>
-        <td><%= book.duration_of_giving_book%></td>
-        <td><%= book.book_price_for_rent%></td>
-        <td><%= link_to 'Buy', viewaddress_path(book) %></td>
-     <%end%>
-   </tr>  
-    </table>
-  </div>
+      <%= select_tag "category", options_for_select(category_array), { "style" => "width:200px"} %> 
+      <%= label_tag :seach_by_book_name%>
+      <%= text_field_tag :search, params[:search], options = {style:"width:200px"} %>
+  
+      <%= label_tag :seach_by_author_name%>
+      <%= text_field_tag :author_search, params[:author_search], options = {style:"width:200px"} %>
+      <%= submit_tag("search", :style => "width:100px;") %>
+    <%end%>
+  </p>
+  <%= button_to "near me",  near_by_me_path , method: :get, style:"width:200px"  %>
+  <table border="1">
+    <tr>
+      <th>Book name</th>
+      <th>author name</th>
+      <th>book_price</th>
+      <th>category</th>
+      <th>book language</th>
+      <th>book publish year</th>
+      <th>book publisher name</th>
+      <th>duration of giving_book</th>
+      <th>Book price for rent</th>
+      <th>Buy</th>
+   </tr>
+    <% @books_array.each do |book|%>
+      <%book.each do |book|%>
+        <tr>
+          <td><%= book.book_name%></td>
+          <td><%= book.author_name%></td>
+          <td><%= book.book_price%></td>
+          <td><%= Category.find(book.category_id).category_name%></td>
+          <td><%= book.book_language%></td>
+          <td><%= book.book_publish_year%></td>
+          <td><%= book.book_publisher_name%></td>
+          <td><%= book.duration_of_giving_book%></td>
+          <td><%= book.book_price_for_rent%></td>
+          <td><%= link_to 'Buy', viewaddress_path(book) %></td>
+        </tr>
+      <%end%> 
+    <%end%>  
+  </table>
+</div>

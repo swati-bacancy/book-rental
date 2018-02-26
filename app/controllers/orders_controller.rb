@@ -10,18 +10,15 @@
     @order.person_id=current_person.id
     @order.order_status=0  
     @order.paymentStatus=0   
-    # @order=@book.create_order(order_params)
     @order.save
-    @book.status=false
-    @book.save
 
+    @book.status=0
+    @book.save 
     redirect_to books_path
   end 
-
   def index
     @orders=Order.where(person_id: current_person.id)
     @count=@orders.count
-
   end
   def show
     @book=Book.find(params[:id])

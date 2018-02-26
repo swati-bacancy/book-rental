@@ -1,15 +1,7 @@
 <div class="col-md-6"> 
   <div class="boxed-section request-form">
     <h2 class="section-title text-center">Create Category</h2>
-    <%= form_for @category do |form| %>
-      <p>
-        <%= form.label :category_name %><br>
-        <%= form.text_field :category_name %>
-      </p>
-      <p>
-        <%= form.submit %>
-      </p>
-    <% end %>
+    <%= render 'form' %>
     <%= link_to "View All Category" , categories_path%>
   </div>
 </div>

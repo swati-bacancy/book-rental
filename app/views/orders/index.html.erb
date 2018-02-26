@@ -1,21 +1,19 @@
 <div class="boxed-section request-form">
-    <h2 class="section-title text-center">Order Detail</h2>
-    <table border="1">
+  <h2 class="section-title text-center">Order Detail</h2>
+  <table border="1">
+    <tr>
+      <th>Serial number</th>
+      <th>Book Name</th>
+      <th>View Book Detail</th>
+      <th>View Order Detail </th>
+      <th>View Person Detail</th>
+      <th>status</th> 
+      <th>cancel</th>
+      <th>payment</th>
+    </tr>
+    <% @orders.each_with_index do |order, index| %>     
       <tr>
-        <th>Serial number</th>
-        <th>Book Name</th>
-        <th>View Book Detail</th>
-        <th>View Order Detail </th>
-        <th>View Person Detail</th>
-        <th>status</th> 
-        <th>cancel</th>
-        <th>payment</th>
-     </tr>
-     <% @orders.each_with_index do |order, index| %>
-
-       
-      <tr>
-       <td><%= index+1 %></td>
+        <td><%= index+1 %></td>
         <td><%= order.book.book_name%></td>
         <td><%= link_to "view book detail",  book_path(order.book) %></td>
         <td><%= link_to "view address detail", address_path(order.address)%></td>
@@ -23,28 +21,31 @@
         <td><%=order.order_status%>
         <td><%= link_to "cancel order" ,order_path(order), method: :delete %>
         <%if order.order_status == "confirmed"%>
-          <td>   
-            <%= form_tag charges_path do %>
-              <article>
-                <% if flash[:error].present? %>
-                  <div id="error_explanation">
-                    <p><%= flash[:error] %></p>
-                  </div>
-                <% end %>
-                
-              </article>
-              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-description="A month's subscription"
-              data-amount="500"
-              data-locale="auto"></script>
-            <% end %>
-          </td>
+          <%if order.paymentStatus == "paid"%>
+            <td>already paid</td>
+          <%else%>
+            <td> 
+              <%= form_tag charges_path(:charges => { :order_id => order.id }), method: :post do %>
+                <article>
+                  <% if flash[:error].present? %>
+                    <div id="error_explanation">
+                      <p><%= flash[:error] %></p>
+                    </div>
+                  <% end %>
+                  
+                </article>
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description="A month's subscription"
+                data-amount="500"
+                data-locale="auto"></script>
+              <%end%>
+            </td>
+          <%end%>
         <%else%>
-          <td></td>
+          <td>Not Confirmed</td>
         <%end%>
-      </tr>
-      
-     <%end%>
-    </table>
-  </div>
+      </tr>      
+    <%end%>
+  </table>
+</div>
