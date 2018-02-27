@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180223045358) do
+ActiveRecord::Schema.define(version: 20180226111452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20180223045358) do
     t.datetime "updated_at", null: false
     t.boolean "status", default: true
     t.bigint "address_id"
+    t.string "bookImage"
     t.index ["address_id"], name: "index_books_on_address_id"
     t.index ["category_id"], name: "index_books_on_category_id"
     t.index ["person_id"], name: "index_books_on_person_id"
@@ -54,6 +55,17 @@ ActiveRecord::Schema.define(version: 20180223045358) do
 
   create_table "categories", force: :cascade do |t|
     t.string "category_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.integer "recipient_id"
+    t.integer "actor_id"
+    t.datetime "read_at"
+    t.string "action"
+    t.integer "notifiable_id"
+    t.string "notifiable_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

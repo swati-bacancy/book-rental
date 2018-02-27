@@ -20,6 +20,11 @@ Rails.application.routes.draw do
   resources :addresses
   resources :orders
   resources :charges
+  resources :notifications do
+    collection do
+      post :mark_as_read 
+    end
+  end
   
   resources :books do 
     resources :addresses do

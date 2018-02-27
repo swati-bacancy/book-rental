@@ -9,6 +9,7 @@ class Person < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable 
 
   has_many :books
+  has_many :notifications, foreign_key: :recipient_id
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 

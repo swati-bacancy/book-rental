@@ -64,6 +64,7 @@ class BooksController < ApplicationController
       @address=Address.find(address)
       @arr<<@address
     end
+
     @a=Array.new
     #@arr=@arr.uniq
     @arr.each do |i|
@@ -79,8 +80,10 @@ class BooksController < ApplicationController
     distance=distance.sort {|a,b| a[1]<=>b[1]}
     @books_array=Array.new 
     distance.each do |i|
-      @books_array.push(Book.where(address_id: i[0]))
+      @books_array.push(@books.where(address_id: i[0]))
     end
+  
+  
 
     #
 
@@ -119,6 +122,7 @@ class BooksController < ApplicationController
                                 :category_id,
                                 :address_id,
                                 :search,
-                                :author_search)
+                                :author_search,
+                                :bookImage)
   end
 end
