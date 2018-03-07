@@ -25,7 +25,7 @@ class BooksController < ApplicationController
   end
   def index
     @books=Book.where(status: true)
-    @first_book=@books.first.category_id
+    # @first_book=@books.first.category_id
 =begin
     if params[:category]==nil
       @cat=Category.find(@first_book)
