@@ -18,6 +18,9 @@
     @book.save 
     redirect_to books_path
   end 
+  def view_person
+    @person=Person.find(params[:id])
+  end
   def index
     @orders=Order.where(person_id: current_person.id)
     @count=@orders.count

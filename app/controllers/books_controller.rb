@@ -34,8 +34,15 @@ class BooksController < ApplicationController
     if params[:category]==nil
       @books=Book.where(status: true)
     else
-      @cat=Category.find_by(category_name: params[:category]) 
-      @books=@books.search(params[:search],params[:author_search],@cat.id)
+      if(params[:category]=="all")
+        @books=Book.where(status: true)
+        @books=@books.search(params[:search],params[:author_search])
+      
+      else
+        @cat=Category.find_by(category_name: params[:category]) 
+        @books=@books.search(params[:search],params[:author_search],@cat.id)
+    
+      end
     end
     #@books=Book.where(person_id:current_person.)
   end

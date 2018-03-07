@@ -4,7 +4,9 @@
       <%= form_tag  books_path , :method => 'get' do %>
         <%= label_tag :seach_by_book_name%>
         <%category_array= Category.all.map{|category| [category.category_name]}%>
+        <%category_array=category_array.push("all")%>
         <%= select_tag "category", options_for_select(category_array), { "style" => "width:200px"} %>
+
 
         
           <%= label_tag :seach_by_book_name%>

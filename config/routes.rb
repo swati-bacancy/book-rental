@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :addresses
   get 'books/viewallbooks'
   get 'orders/order_detail'
+  get 'orders/view_person/:id'=>'orders#view_person', as: :view_person
   # get 'addresses/confirm_order'
   root to: 'books#index'
   get 'final_confirm/:id' => 'orders#final_confirm', as: :final_confirm
