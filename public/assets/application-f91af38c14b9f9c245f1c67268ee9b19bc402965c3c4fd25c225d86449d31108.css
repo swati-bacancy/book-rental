@@ -1,0 +1,3005 @@
+/*!
+ * Project_Name: Themezy Lincoln High School
+ * Author: Themezy
+ * Email: info@themezy.com
+ * URL: http://themezy.com
+ */
+/*=========================================== 
+ * Importing CSS Libraries
+ *===========================================*/
+/* line 11, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+body {
+  color: #8f9b86;
+  font-family: "Arvo", "Roboto Slab", "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 300;
+}
+
+/* line 19, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+address {
+  font-style: normal;
+}
+
+/* line 23, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  line-height: normal;
+}
+
+@media screen and (max-width: 990px) {
+  /* line 28, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .container {
+    padding: 0 30px !important;
+  }
+}
+@font-face {
+  font-family: "Cabin Sketch";
+  src: url("fonts/cabinsketch-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cabin Sketch";
+  src: url("fonts/cabinsketch-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+/* line 45, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 59, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 65, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 70, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 74, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+html {
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 81, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* line 89, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+body {
+  margin: 0;
+}
+
+/* line 93, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+a {
+  background: transparent;
+}
+
+/* line 96, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 99, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 103, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 108, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 113, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 118, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 123, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 128, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/* line 133, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 137, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 142, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 146, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 151, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 159, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 165, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 169, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 175, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 179, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 187, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 191, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 195, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+img {
+  border: 0;
+}
+
+/* line 199, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 203, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+figure {
+  margin: 0;
+}
+
+/* line 207, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 213, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 219, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+/* line 229, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/* line 234, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 239, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 247, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 252, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 10;
+  color: red;
+}
+
+/* line 259, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 265, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 270, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 275, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 280, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 285, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 290, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+[class^="icon-"] {
+  vertical-align: middle;
+}
+
+/* line 294, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.icon-book {
+  background-image: url(/assets/icon-book-bcafc0edff83adb254cf207e21877d421ba3f9915d4749592c648e7f73f81e50.png);
+  display: inline-block;
+  width: 37px;
+  height: 43px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  /* line 301, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .icon-book {
+    background-image: url(/assets/icon-book@2x-40120677d2ccdb5699cfad3662545ada3a8d261329206ca926c2d93d6373a66f.png);
+    background-size: 37px 43px;
+  }
+}
+/* line 307, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.icon-calendar {
+  background-image: url(/assets/icon-small-calendar-3d5478323c6ce394ab0914e968d880d697018c98968ad7a990c6832cce0007cf.png);
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  /* line 314, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .icon-calendar {
+    background-image: url("images/icon-small-calendar@2x.png");
+    background-size: 13px 13px;
+  }
+}
+/* line 320, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.icon-calendar-lg {
+  background-image: url(/assets/icon-calendar-6eb38a7918bcd26dc6867a0d583e3ba05c73f8f65e83ff49306fef5957138d9f.png);
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  /* line 327, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .icon-calendar-lg {
+    background-image: url(/assets/icon-calendar@2x-4106d0bdf549469003dec2ecc759fd1636bb6875b713258f942714350041e2c0.png);
+    background-size: 50px 50px;
+  }
+}
+/* line 333, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.icon-clock {
+  background-image: url(/assets/icon-clock-dd8efe512d60c2a40ffec44bd2d97065c30c66eb02c234d5151d3ec35d6f3001.png);
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  /* line 340, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .icon-clock {
+    background-image: url("images/icon-clock@2x.png");
+    background-size: 17px 17px;
+  }
+}
+/* line 346, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.icon-coins {
+  background-image: url("images/icon-coins.png");
+  display: inline-block;
+  width: 17px;
+  height: 14px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  /* line 353, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .icon-coins {
+    background-image: url("images/icon-coins@2x.png");
+    background-size: 17px 14px;
+  }
+}
+/* line 359, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.icon-map-marker {
+  background-image: url("images/icon-map-marker.png");
+  display: inline-block;
+  width: 11px;
+  height: 14px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  /* line 366, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .icon-map-marker {
+    background-image: url("images/icon-map-marker@2x.png");
+    background-size: 11px 14px;
+  }
+}
+/* line 372, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.icon-newspaper {
+  background-image: url("images/icon-newspaper.png");
+  display: inline-block;
+  width: 50px;
+  height: 43px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  /* line 379, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .icon-newspaper {
+    background-image: url("images/icon-newspaper@2x.png");
+    background-size: 50px 43px;
+  }
+}
+/* line 385, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.icon-user {
+  background-image: url("images/icon-user.png");
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  /* line 392, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .icon-user {
+    background-image: url("images/icon-user@2x.png");
+    background-size: 16px 15px;
+  }
+}
+/* line 398, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.button, input[type="submit"] {
+  padding: 10px 20px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* line 407, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.button.primary, input.primary[type="submit"] {
+  background: #f7eacc;
+  background: -webkit-linear-gradient(270deg, #f7eacc, #c2ae81);
+  background: linear-gradient(180deg, #f7eacc, #c2ae81);
+  color: #72664c;
+}
+
+/* line 413, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.button.primary:hover, input.primary[type="submit"]:hover {
+  background: #c2ae81;
+  background: -webkit-linear-gradient(90deg, #f7eacc, #c2ae81);
+  background: linear-gradient(0deg, #f7eacc, #c2ae81);
+}
+
+/* line 418, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.button.secondary, input.secondary[type="submit"], .pagination .page-numbers {
+  background: #cbd3c4;
+  background: -webkit-linear-gradient(270deg, #e4e9e0, #cbd3c4);
+  background: linear-gradient(180deg, #e4e9e0, #cbd3c4);
+  color: #8a9184;
+}
+
+/* line 424, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.button.secondary:hover, input.secondary[type="submit"]:hover, .pagination .page-numbers:hover {
+  background: #cbd3c4;
+  background: -webkit-linear-gradient(90deg, #e4e9e0, #cbd3c4);
+  background: linear-gradient(0deg, #e4e9e0, #cbd3c4);
+}
+
+/* line 429, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.button.green, input.green[type="submit"], .pagination .page-numbers.current, .accordion.expanded .accordion-toggle:after {
+  background: #719c51;
+  background: -webkit-linear-gradient(270deg, #719c51, #648a48);
+  background: linear-gradient(180deg, #719c51, #648a48);
+  color: white;
+}
+
+/* line 435, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.button.green:hover, input.green[type="submit"]:hover, .pagination .page-numbers.current:hover, .accordion.expanded .accordion-toggle:hover:after {
+  background: #648a48;
+  background: -webkit-linear-gradient(90deg, #719c51, #648a48);
+  background: linear-gradient(0deg, #719c51, #648a48);
+}
+
+/* line 440, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.button.large, input.large[type="submit"] {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+/* line 445, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+input[type="submit"] {
+  background: #6c7f60;
+  background: -webkit-linear-gradient(270deg, #6c7f60, #495740);
+  background: linear-gradient(180deg, #6c7f60, #495740);
+  color: white;
+  text-decoration: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* line 452, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+input[type="submit"]:hover {
+  background: -webkit-linear-gradient(90deg, #6c7f60, #495740);
+  background: linear-gradient(0deg, #6c7f60, #495740);
+}
+
+/* line 456, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+input[type="submit"].light {
+  background: #c6d3bd;
+  background: -webkit-linear-gradient(270deg, #c6d3bd, #a5b59b);
+  background: linear-gradient(180deg, #c6d3bd, #a5b59b);
+  color: #505f46;
+}
+
+/* line 462, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+input[type="submit"].light:hover {
+  background: -webkit-linear-gradient(90deg, #c6d3bd, #a5b59b);
+  background: linear-gradient(0deg, #c6d3bd, #a5b59b);
+}
+
+/* line 467, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.fullwidth-block {
+  padding: 30px 0;
+}
+
+/* line 471, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.section-title {
+  margin: 0 0 30px;
+  color: #777c73;
+  font-weight: 300;
+}
+
+/* line 476, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.section-title [class^="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* line 482, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 486, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.social-links.circle a {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  background: #c6d3bd;
+  background: -webkit-linear-gradient(270deg, #c6d3bd, #a5b59b);
+  background: linear-gradient(180deg, #c6d3bd, #a5b59b);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+  color: #505f46;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 2;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* line 503, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.social-links.circle a:hover {
+  background: -webkit-linear-gradient(90deg, #c6d3bd, #a5b59b);
+  background: linear-gradient(0deg, #c6d3bd, #a5b59b);
+}
+
+/* line 508, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.boxed-section {
+  margin: 30px 0;
+  padding: 40px;
+  background-color: #d8ddd4;
+  border-radius: 10px;
+  color: #86907e;
+}
+
+/* line 516, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+form .field {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* line 521, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+form .field label, form .field .control {
+  display: table-cell;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 525, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  form .field label, form .field .control {
+    width: 100%;
+    display: block;
+  }
+}
+/* line 530, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+form input, form textarea, form select {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  color: #747d6f;
+}
+
+/* line 542, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+form select {
+  padding-right: 35px;
+  background-image: url(/assets/select-238385a3019617ce690c12a44d09dadd58ab9a83ba3fa6be9ee6b90cc08817a2.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  /* line 549, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  form select {
+    background-image: url("images/select@2x.png");
+    background-size: 36px 26px;
+  }
+}
+/* line 555, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.student-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* line 560, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.student-list li {
+  position: relative;
+  padding-left: 100px;
+  min-height: 100px;
+}
+
+/* line 565, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.student-list li img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 571, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.subscribe input {
+  width: 100%;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* line 577, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.courses {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  line-height: normal;
+  border-top: 1px solid #d8ddd4;
+}
+
+/* line 584, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.courses li {
+  padding: 15px 0;
+  border-bottom: 1px solid #d8ddd4;
+}
+
+/* line 588, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.courses li.current {
+  background: #719d51;
+  background: -webkit-linear-gradient(270deg, #719d51, #638948);
+  background: linear-gradient(180deg, #719d51, #638948);
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  margin: -1px -15px 0;
+  position: relative;
+}
+
+/* line 598, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.courses li.current .course-title a {
+  color: white;
+}
+
+/* line 601, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.courses li.current .course-meta {
+  color: #a7c094;
+}
+
+/* line 604, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.courses li.current:before {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-width: 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent #6a934c transparent transparent;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* line 617, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.courses .course-title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin: 0 0 10px;
+}
+
+/* line 622, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.courses .course-title a {
+  color: #719d51;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+/* line 627, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.courses .course-meta {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #a1ad98;
+  font-weight: 300;
+}
+
+/* line 633, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.courses .course-meta span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* line 637, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.courses .course-meta span [class^="icon-"] {
+  margin-right: 5px;
+}
+
+/* line 641, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.pagination {
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* line 645, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.pagination .page-numbers {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+/* line 653, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.students-grid {
+  *zoom: 1;
+  list-style: none;
+  margin: 30px -15px;
+  padding-left: 0;
+}
+
+/* line 659, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.students-grid:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+/* line 666, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.students-grid .student {
+  padding: 15px;
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+@media screen and (max-width: 990px) {
+  /* line 673, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .students-grid .student {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 678, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .students-grid .student {
+    width: 100%;
+  }
+}
+/* line 682, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.students-grid .avatar {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* line 686, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.students-grid .avatar img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* line 692, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.students-grid .student-name {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+/* line 697, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.students-grid .student-name a {
+  color: #719d51;
+  text-decoration: none;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+/* line 703, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.students-grid .student-name a:hover {
+  color: #a6c58f;
+}
+
+/* line 706, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.students-grid .student-sum {
+  line-height: normal;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #8f9b86;
+}
+
+/* line 713, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.accordion {
+  overflow: hidden;
+  border-top: 1px solid #d8ddd4;
+}
+
+/* line 717, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.accordion .accordion-toggle {
+  position: relative;
+  padding: 10px  30px 10px 0;
+}
+
+/* line 721, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.accordion .accordion-toggle h3 {
+  display: inline-block;
+  margin: 0 20px 0 0;
+  vertical-align: middle;
+  color: #719d51;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+@media screen and (max-width: 990px) {
+  /* line 731, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .accordion .accordion-toggle h3 {
+    display: block;
+  }
+}
+/* line 735, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.accordion .accordion-toggle span {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* line 739, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.accordion .accordion-toggle:after {
+  content: "\f107";
+  font-family: "FontAwesome";
+  text-align: center;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #e1e7db;
+  cursor: pointer;
+}
+
+/* line 753, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.accordion.expanded .accordion-toggle:after {
+  content: "\f106";
+  line-height: 1.8;
+}
+
+/* line 757, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.accordion .accordion-content {
+  display: none;
+  clear: both;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+/* line 764, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.map {
+  height: 350px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* line 771, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.contact-info a {
+  color: #8F9B86;
+  text-decoration: none;
+  display: block;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+/* line 778, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.contact-info a:hover {
+  color: #117213;
+}
+
+/* line 782, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.contact-form {
+  *zoom: 1;
+}
+
+/* line 785, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.contact-form:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+/* line 792, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.contact-form p {
+  display: table;
+  width: 100%;
+}
+
+/* line 796, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.contact-form label, .contact-form .control {
+  display: table-cell;
+}
+
+/* line 799, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.contact-form label {
+  width: 100px;
+}
+
+/* line 802, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.contact-form .control input, .contact-form .control textarea {
+  width: 100%;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+/* line 807, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.contact-form .control input:focus, .contact-form .control input:active, .contact-form .control textarea:focus, .contact-form .control textarea:active {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* line 810, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.contact-form .control textarea {
+  min-height: 200px;
+}
+
+/* line 813, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.contact-form .text-right {
+  display: block;
+  text-align: right;
+}
+
+/* line 817, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.contact-form .text-right input[type="submit"] {
+  display: inline-block;
+}
+
+/* line 821, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  *zoom: 1;
+}
+
+/* line 828, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.container:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+@media (min-width: 768px) {
+  /* line 836, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 841, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 846, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .container {
+    width: 1170px;
+  }
+}
+/* line 851, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  *zoom: 1;
+}
+
+/* line 858, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.container-fluid:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+/* line 866, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  *zoom: 1;
+}
+
+/* line 871, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.row:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+/* line 879, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 886, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+}
+
+/* line 890, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-1 {
+  width: 8.33333%;
+}
+
+/* line 894, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-2 {
+  width: 16.66667%;
+}
+
+/* line 898, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-3 {
+  width: 25%;
+}
+
+/* line 902, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-4 {
+  width: 33.33333%;
+}
+
+/* line 906, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-5 {
+  width: 41.66667%;
+}
+
+/* line 910, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-6 {
+  width: 50%;
+}
+
+/* line 914, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-7 {
+  width: 58.33333%;
+}
+
+/* line 918, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-8 {
+  width: 66.66667%;
+}
+
+/* line 922, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-9 {
+  width: 75%;
+}
+
+/* line 926, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-10 {
+  width: 83.33333%;
+}
+
+/* line 930, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-11 {
+  width: 91.66667%;
+}
+
+/* line 934, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-12 {
+  width: 100%;
+}
+
+/* line 938, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-pull-0 {
+  right: auto;
+}
+
+/* line 942, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-pull-1 {
+  right: 8.33333%;
+}
+
+/* line 946, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-pull-2 {
+  right: 16.66667%;
+}
+
+/* line 950, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-pull-3 {
+  right: 25%;
+}
+
+/* line 954, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-pull-4 {
+  right: 33.33333%;
+}
+
+/* line 958, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-pull-5 {
+  right: 41.66667%;
+}
+
+/* line 962, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-pull-6 {
+  right: 50%;
+}
+
+/* line 966, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-pull-7 {
+  right: 58.33333%;
+}
+
+/* line 970, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-pull-8 {
+  right: 66.66667%;
+}
+
+/* line 974, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-pull-9 {
+  right: 75%;
+}
+
+/* line 978, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-pull-10 {
+  right: 83.33333%;
+}
+
+/* line 982, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-pull-11 {
+  right: 91.66667%;
+}
+
+/* line 986, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-pull-12 {
+  right: 100%;
+}
+
+/* line 990, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-push-0 {
+  left: auto;
+}
+
+/* line 994, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-push-1 {
+  left: 8.33333%;
+}
+
+/* line 998, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-push-2 {
+  left: 16.66667%;
+}
+
+/* line 1002, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-push-3 {
+  left: 25%;
+}
+
+/* line 1006, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-push-4 {
+  left: 33.33333%;
+}
+
+/* line 1010, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-push-5 {
+  left: 41.66667%;
+}
+
+/* line 1014, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-push-6 {
+  left: 50%;
+}
+
+/* line 1018, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-push-7 {
+  left: 58.33333%;
+}
+
+/* line 1022, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-push-8 {
+  left: 66.66667%;
+}
+
+/* line 1026, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-push-9 {
+  left: 75%;
+}
+
+/* line 1030, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-push-10 {
+  left: 83.33333%;
+}
+
+/* line 1034, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-push-11 {
+  left: 91.66667%;
+}
+
+/* line 1038, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-push-12 {
+  left: 100%;
+}
+
+/* line 1042, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-offset-0 {
+  margin-left: 0%;
+}
+
+/* line 1046, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-offset-1 {
+  margin-left: 8.33333%;
+}
+
+/* line 1050, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-offset-2 {
+  margin-left: 16.66667%;
+}
+
+/* line 1054, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-offset-3 {
+  margin-left: 25%;
+}
+
+/* line 1058, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-offset-4 {
+  margin-left: 33.33333%;
+}
+
+/* line 1062, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-offset-5 {
+  margin-left: 41.66667%;
+}
+
+/* line 1066, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-offset-6 {
+  margin-left: 50%;
+}
+
+/* line 1070, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-offset-7 {
+  margin-left: 58.33333%;
+}
+
+/* line 1074, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-offset-8 {
+  margin-left: 66.66667%;
+}
+
+/* line 1078, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-offset-9 {
+  margin-left: 75%;
+}
+
+/* line 1082, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-offset-10 {
+  margin-left: 83.33333%;
+}
+
+/* line 1086, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-offset-11 {
+  margin-left: 91.66667%;
+}
+
+/* line 1090, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.col-xs-offset-12 {
+  margin-left: 100%;
+}
+
+@media (min-width: 768px) {
+  /* line 1095, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left;
+  }
+
+  /* line 1099, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-1 {
+    width: 8.33333%;
+  }
+
+  /* line 1103, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-2 {
+    width: 16.66667%;
+  }
+
+  /* line 1107, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-3 {
+    width: 25%;
+  }
+
+  /* line 1111, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-4 {
+    width: 33.33333%;
+  }
+
+  /* line 1115, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-5 {
+    width: 41.66667%;
+  }
+
+  /* line 1119, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-6 {
+    width: 50%;
+  }
+
+  /* line 1123, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-7 {
+    width: 58.33333%;
+  }
+
+  /* line 1127, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-8 {
+    width: 66.66667%;
+  }
+
+  /* line 1131, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-9 {
+    width: 75%;
+  }
+
+  /* line 1135, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-10 {
+    width: 83.33333%;
+  }
+
+  /* line 1139, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-11 {
+    width: 91.66667%;
+  }
+
+  /* line 1143, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-12 {
+    width: 100%;
+  }
+
+  /* line 1147, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-pull-0 {
+    right: auto;
+  }
+
+  /* line 1151, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-pull-1 {
+    right: 8.33333%;
+  }
+
+  /* line 1155, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-pull-2 {
+    right: 16.66667%;
+  }
+
+  /* line 1159, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-pull-3 {
+    right: 25%;
+  }
+
+  /* line 1163, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-pull-4 {
+    right: 33.33333%;
+  }
+
+  /* line 1167, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-pull-5 {
+    right: 41.66667%;
+  }
+
+  /* line 1171, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-pull-6 {
+    right: 50%;
+  }
+
+  /* line 1175, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-pull-7 {
+    right: 58.33333%;
+  }
+
+  /* line 1179, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-pull-8 {
+    right: 66.66667%;
+  }
+
+  /* line 1183, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-pull-9 {
+    right: 75%;
+  }
+
+  /* line 1187, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-pull-10 {
+    right: 83.33333%;
+  }
+
+  /* line 1191, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-pull-11 {
+    right: 91.66667%;
+  }
+
+  /* line 1195, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-pull-12 {
+    right: 100%;
+  }
+
+  /* line 1199, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-push-0 {
+    left: auto;
+  }
+
+  /* line 1203, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-push-1 {
+    left: 8.33333%;
+  }
+
+  /* line 1207, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-push-2 {
+    left: 16.66667%;
+  }
+
+  /* line 1211, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-push-3 {
+    left: 25%;
+  }
+
+  /* line 1215, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-push-4 {
+    left: 33.33333%;
+  }
+
+  /* line 1219, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-push-5 {
+    left: 41.66667%;
+  }
+
+  /* line 1223, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-push-6 {
+    left: 50%;
+  }
+
+  /* line 1227, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-push-7 {
+    left: 58.33333%;
+  }
+
+  /* line 1231, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-push-8 {
+    left: 66.66667%;
+  }
+
+  /* line 1235, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-push-9 {
+    left: 75%;
+  }
+
+  /* line 1239, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-push-10 {
+    left: 83.33333%;
+  }
+
+  /* line 1243, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-push-11 {
+    left: 91.66667%;
+  }
+
+  /* line 1247, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-push-12 {
+    left: 100%;
+  }
+
+  /* line 1251, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-offset-0 {
+    margin-left: 0%;
+  }
+
+  /* line 1255, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-offset-1 {
+    margin-left: 8.33333%;
+  }
+
+  /* line 1259, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-offset-2 {
+    margin-left: 16.66667%;
+  }
+
+  /* line 1263, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-offset-3 {
+    margin-left: 25%;
+  }
+
+  /* line 1267, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-offset-4 {
+    margin-left: 33.33333%;
+  }
+
+  /* line 1271, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-offset-5 {
+    margin-left: 41.66667%;
+  }
+
+  /* line 1275, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-offset-6 {
+    margin-left: 50%;
+  }
+
+  /* line 1279, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-offset-7 {
+    margin-left: 58.33333%;
+  }
+
+  /* line 1283, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-offset-8 {
+    margin-left: 66.66667%;
+  }
+
+  /* line 1287, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-offset-9 {
+    margin-left: 75%;
+  }
+
+  /* line 1291, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-offset-10 {
+    margin-left: 83.33333%;
+  }
+
+  /* line 1295, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-offset-11 {
+    margin-left: 91.66667%;
+  }
+
+  /* line 1299, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-sm-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 1304, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+  }
+
+  /* line 1308, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-1 {
+    width: 8.33333%;
+  }
+
+  /* line 1312, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-2 {
+    width: 16.66667%;
+  }
+
+  /* line 1316, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-3 {
+    width: 25%;
+  }
+
+  /* line 1320, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-4 {
+    width: 33.33333%;
+  }
+
+  /* line 1324, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-5 {
+    width: 41.66667%;
+  }
+
+  /* line 1328, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-6 {
+    width: 50%;
+  }
+
+  /* line 1332, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-7 {
+    width: 58.33333%;
+  }
+
+  /* line 1336, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-8 {
+    width: 66.66667%;
+  }
+
+  /* line 1340, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-9 {
+    width: 75%;
+  }
+
+  /* line 1344, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-10 {
+    width: 83.33333%;
+  }
+
+  /* line 1348, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-11 {
+    width: 91.66667%;
+  }
+
+  /* line 1352, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-12 {
+    width: 100%;
+  }
+
+  /* line 1356, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-pull-0 {
+    right: auto;
+  }
+
+  /* line 1360, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-pull-1 {
+    right: 8.33333%;
+  }
+
+  /* line 1364, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-pull-2 {
+    right: 16.66667%;
+  }
+
+  /* line 1368, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-pull-3 {
+    right: 25%;
+  }
+
+  /* line 1372, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-pull-4 {
+    right: 33.33333%;
+  }
+
+  /* line 1376, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-pull-5 {
+    right: 41.66667%;
+  }
+
+  /* line 1380, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-pull-6 {
+    right: 50%;
+  }
+
+  /* line 1384, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-pull-7 {
+    right: 58.33333%;
+  }
+
+  /* line 1388, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-pull-8 {
+    right: 66.66667%;
+  }
+
+  /* line 1392, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-pull-9 {
+    right: 75%;
+  }
+
+  /* line 1396, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-pull-10 {
+    right: 83.33333%;
+  }
+
+  /* line 1400, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-pull-11 {
+    right: 91.66667%;
+  }
+
+  /* line 1404, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-pull-12 {
+    right: 100%;
+  }
+
+  /* line 1408, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-push-0 {
+    left: auto;
+  }
+
+  /* line 1412, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-push-1 {
+    left: 8.33333%;
+  }
+
+  /* line 1416, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-push-2 {
+    left: 16.66667%;
+  }
+
+  /* line 1420, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-push-3 {
+    left: 25%;
+  }
+
+  /* line 1424, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-push-4 {
+    left: 33.33333%;
+  }
+
+  /* line 1428, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-push-5 {
+    left: 41.66667%;
+  }
+
+  /* line 1432, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-push-6 {
+    left: 50%;
+  }
+
+  /* line 1436, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-push-7 {
+    left: 58.33333%;
+  }
+
+  /* line 1440, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-push-8 {
+    left: 66.66667%;
+  }
+
+  /* line 1444, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-push-9 {
+    left: 75%;
+  }
+
+  /* line 1448, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-push-10 {
+    left: 83.33333%;
+  }
+
+  /* line 1452, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-push-11 {
+    left: 91.66667%;
+  }
+
+  /* line 1456, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-push-12 {
+    left: 100%;
+  }
+
+  /* line 1460, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-offset-0 {
+    margin-left: 0%;
+  }
+
+  /* line 1464, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-offset-1 {
+    margin-left: 8.33333%;
+  }
+
+  /* line 1468, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-offset-2 {
+    margin-left: 16.66667%;
+  }
+
+  /* line 1472, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-offset-3 {
+    margin-left: 25%;
+  }
+
+  /* line 1476, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-offset-4 {
+    margin-left: 33.33333%;
+  }
+
+  /* line 1480, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-offset-5 {
+    margin-left: 41.66667%;
+  }
+
+  /* line 1484, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-offset-6 {
+    margin-left: 50%;
+  }
+
+  /* line 1488, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-offset-7 {
+    margin-left: 58.33333%;
+  }
+
+  /* line 1492, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-offset-8 {
+    margin-left: 66.66667%;
+  }
+
+  /* line 1496, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-offset-9 {
+    margin-left: 75%;
+  }
+
+  /* line 1500, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-offset-10 {
+    margin-left: 83.33333%;
+  }
+
+  /* line 1504, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-offset-11 {
+    margin-left: 91.66667%;
+  }
+
+  /* line 1508, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-md-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 1513, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+  }
+
+  /* line 1517, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-1 {
+    width: 8.33333%;
+  }
+
+  /* line 1521, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-2 {
+    width: 16.66667%;
+  }
+
+  /* line 1525, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-3 {
+    width: 25%;
+  }
+
+  /* line 1529, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-4 {
+    width: 33.33333%;
+  }
+
+  /* line 1533, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-5 {
+    width: 41.66667%;
+  }
+
+  /* line 1537, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-6 {
+    width: 50%;
+  }
+
+  /* line 1541, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-7 {
+    width: 58.33333%;
+  }
+
+  /* line 1545, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-8 {
+    width: 66.66667%;
+  }
+
+  /* line 1549, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-9 {
+    width: 75%;
+  }
+
+  /* line 1553, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-10 {
+    width: 83.33333%;
+  }
+
+  /* line 1557, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-11 {
+    width: 91.66667%;
+  }
+
+  /* line 1561, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-12 {
+    width: 100%;
+  }
+
+  /* line 1565, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-pull-0 {
+    right: auto;
+  }
+
+  /* line 1569, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-pull-1 {
+    right: 8.33333%;
+  }
+
+  /* line 1573, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-pull-2 {
+    right: 16.66667%;
+  }
+
+  /* line 1577, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-pull-3 {
+    right: 25%;
+  }
+
+  /* line 1581, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-pull-4 {
+    right: 33.33333%;
+  }
+
+  /* line 1585, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-pull-5 {
+    right: 41.66667%;
+  }
+
+  /* line 1589, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-pull-6 {
+    right: 50%;
+  }
+
+  /* line 1593, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-pull-7 {
+    right: 58.33333%;
+  }
+
+  /* line 1597, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-pull-8 {
+    right: 66.66667%;
+  }
+
+  /* line 1601, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-pull-9 {
+    right: 75%;
+  }
+
+  /* line 1605, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-pull-10 {
+    right: 83.33333%;
+  }
+
+  /* line 1609, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-pull-11 {
+    right: 91.66667%;
+  }
+
+  /* line 1613, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-pull-12 {
+    right: 100%;
+  }
+
+  /* line 1617, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-push-0 {
+    left: auto;
+  }
+
+  /* line 1621, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-push-1 {
+    left: 8.33333%;
+  }
+
+  /* line 1625, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-push-2 {
+    left: 16.66667%;
+  }
+
+  /* line 1629, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-push-3 {
+    left: 25%;
+  }
+
+  /* line 1633, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-push-4 {
+    left: 33.33333%;
+  }
+
+  /* line 1637, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-push-5 {
+    left: 41.66667%;
+  }
+
+  /* line 1641, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-push-6 {
+    left: 50%;
+  }
+
+  /* line 1645, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-push-7 {
+    left: 58.33333%;
+  }
+
+  /* line 1649, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-push-8 {
+    left: 66.66667%;
+  }
+
+  /* line 1653, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-push-9 {
+    left: 75%;
+  }
+
+  /* line 1657, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-push-10 {
+    left: 83.33333%;
+  }
+
+  /* line 1661, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-push-11 {
+    left: 91.66667%;
+  }
+
+  /* line 1665, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-push-12 {
+    left: 100%;
+  }
+
+  /* line 1669, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-offset-0 {
+    margin-left: 0%;
+  }
+
+  /* line 1673, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-offset-1 {
+    margin-left: 8.33333%;
+  }
+
+  /* line 1677, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-offset-2 {
+    margin-left: 16.66667%;
+  }
+
+  /* line 1681, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-offset-3 {
+    margin-left: 25%;
+  }
+
+  /* line 1685, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-offset-4 {
+    margin-left: 33.33333%;
+  }
+
+  /* line 1689, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-offset-5 {
+    margin-left: 41.66667%;
+  }
+
+  /* line 1693, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-offset-6 {
+    margin-left: 50%;
+  }
+
+  /* line 1697, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-offset-7 {
+    margin-left: 58.33333%;
+  }
+
+  /* line 1701, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-offset-8 {
+    margin-left: 66.66667%;
+  }
+
+  /* line 1705, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-offset-9 {
+    margin-left: 75%;
+  }
+
+  /* line 1709, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-offset-10 {
+    margin-left: 83.33333%;
+  }
+
+  /* line 1713, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-offset-11 {
+    margin-left: 91.66667%;
+  }
+
+  /* line 1717, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .col-lg-offset-12 {
+    margin-left: 100%;
+  }
+}
+@-ms-viewport {
+  width: device-width;
+}
+/* line 1724, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.visible-xs, .visible-sm, .visible-md, .visible-lg {
+  display: none !important;
+}
+
+/* line 1728, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block,
+.visible-sm-block,
+.visible-sm-inline,
+.visible-sm-inline-block,
+.visible-md-block,
+.visible-md-inline,
+.visible-md-inline-block,
+.visible-lg-block,
+.visible-lg-inline,
+.visible-lg-inline-block {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  /* line 1744, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-xs {
+    display: block !important;
+  }
+
+  /* line 1748, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  table.visible-xs {
+    display: table;
+  }
+
+  /* line 1752, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  tr.visible-xs {
+    display: table-row !important;
+  }
+
+  /* line 1756, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  th.visible-xs,
+  td.visible-xs {
+    display: table-cell !important;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1762, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-xs-block {
+    display: block !important;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1768, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-xs-inline {
+    display: inline !important;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1774, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-xs-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 1780, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-sm {
+    display: block !important;
+  }
+
+  /* line 1784, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  table.visible-sm {
+    display: table;
+  }
+
+  /* line 1788, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  tr.visible-sm {
+    display: table-row !important;
+  }
+
+  /* line 1792, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  th.visible-sm,
+  td.visible-sm {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 1798, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-sm-block {
+    display: block !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 1804, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-sm-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 1810, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-sm-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 1816, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-md {
+    display: block !important;
+  }
+
+  /* line 1820, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  table.visible-md {
+    display: table;
+  }
+
+  /* line 1824, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  tr.visible-md {
+    display: table-row !important;
+  }
+
+  /* line 1828, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  th.visible-md,
+  td.visible-md {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 1834, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-md-block {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 1840, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-md-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 1846, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-md-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 1852, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-lg {
+    display: block !important;
+  }
+
+  /* line 1856, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  table.visible-lg {
+    display: table;
+  }
+
+  /* line 1860, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  tr.visible-lg {
+    display: table-row !important;
+  }
+
+  /* line 1864, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  th.visible-lg,
+  td.visible-lg {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 1870, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-lg-block {
+    display: block !important;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 1876, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-lg-inline {
+    display: inline !important;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 1882, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-lg-inline-block {
+    display: inline-block !important;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1888, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 1893, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 1898, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 1903, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .hidden-lg {
+    display: none !important;
+  }
+}
+/* line 1907, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.visible-print {
+  display: none !important;
+}
+
+@media print {
+  /* line 1912, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-print {
+    display: block !important;
+  }
+
+  /* line 1916, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  table.visible-print {
+    display: table;
+  }
+
+  /* line 1920, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  tr.visible-print {
+    display: table-row !important;
+  }
+
+  /* line 1924, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  th.visible-print,
+  td.visible-print {
+    display: table-cell !important;
+  }
+}
+/* line 1929, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.visible-print-block {
+  display: none !important;
+}
+
+@media print {
+  /* line 1933, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-print-block {
+    display: block !important;
+  }
+}
+/* line 1938, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.visible-print-inline {
+  display: none !important;
+}
+
+@media print {
+  /* line 1942, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-print-inline {
+    display: inline !important;
+  }
+}
+/* line 1947, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.visible-print-inline-block {
+  display: none !important;
+}
+
+@media print {
+  /* line 1951, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .visible-print-inline-block {
+    display: inline-block !important;
+  }
+}
+@media print {
+  /* line 1957, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .hidden-print {
+    display: none !important;
+  }
+}
+/* line 1961, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.site-header {
+  *zoom: 1;
+  position: relative;
+  padding: 30px 0 40px;
+  margin-bottom: 50px;
+  background-color: #475d36;
+  background-image: url(../assets/chalkboard.jpg);
+  background-attachment: fixed;
+  background-position: bottom center;
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* line 1972, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.site-header:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* line 1980, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .site-header {
+    background-image: url(/assets/chalkboard@2x-c72b022829cb76b3ab1ebd7009c9dc770ff5bcd5ecdec795a2e7c097cf1700a4.jpg) repeat-x;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* line 1986, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .site-header:after {
+    background-ima-ge: imageurl("wood@2x.png") repeat-x;
+  }
+}
+/* line 1991, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.primary-header {
+  background-image: url(/assets/line-38276b0337643c9be89d23acc42f2780728a4b03f2c454a7c469fbcca5538392.png) repeat-x bottom center;
+  padding-bottom: 30px;
+}
+
+/* line 1996, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+#branding {
+  *zoom: 1;
+  float: left;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* line 2003, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+#branding:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+/* line 2010, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+#branding img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* line 2014, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+#branding .site-title {
+  display: inline-block;
+  margin: 0;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* line 2023, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.main-navigation {
+  float: right;
+  position: relative;
+  margin-top: 10px;
+}
+
+/* line 2028, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.main-navigation .menu {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 991px) {
+  /* line 2034, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .main-navigation .menu {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 990px) {
+  /* line 2039, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .main-navigation .menu {
+    display: none;
+  }
+}
+/* line 2043, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.main-navigation .menu-item {
+  float: left;
+  margin: 0 0 0 5px;
+}
+
+/* line 2047, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.main-navigation .menu-item a {
+  font-size: 17px;
+  font-size: 1.0625rem;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+
+/* line 2055, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.main-navigation .menu-item.current-menu-item a, .main-navigation .menu-item:hover a {
+  color: #72664c;
+  background: #f7eacc;
+  background: -webkit-linear-gradient(270deg, #f7eacc, #cfbe97);
+  background: linear-gradient(180deg, #f7eacc, #cfbe97);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* line 2062, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.main-navigation .menu-toggle {
+  border: none;
+  color: #72664c;
+  background: #f7eacc;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background: -webkit-linear-gradient(270deg, #f7eacc, #cfbe97);
+  background: linear-gradient(180deg, #f7eacc, #cfbe97);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+  display: none;
+  outline: none;
+}
+
+/* line 2074, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.main-navigation .menu-toggle:active {
+  background: -webkit-linear-gradient(90deg, #f7eacc, #cfbe97);
+  background: linear-gradient(0deg, #f7eacc, #cfbe97);
+}
+
+@media screen and (max-width: 990px) {
+  /* line 2079, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .main-navigation .menu-toggle {
+    display: block;
+  }
+}
+/* line 2084, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.mobile-navigation {
+  clear: both;
+  padding: 30px 0;
+  display: none;
+}
+
+@media screen and (min-width: 991px) {
+  /* line 2090, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .mobile-navigation {
+    display: none !important;
+  }
+}
+/* line 2094, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.mobile-navigation .menu {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* line 2103, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.mobile-navigation .menu a {
+  display: block;
+  padding: 10px 0;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+/* line 2111, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.mobile-navigation .menu .current-menu-item a, .mobile-navigation .menu .menu-item:hover a {
+  color: #72664c;
+  background: #f7eacc;
+  background: -webkit-linear-gradient(270deg, #f7eacc, #cfbe97);
+  background: linear-gradient(180deg, #f7eacc, #cfbe97);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* line 2119, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.slider {
+  position: relative;
+}
+
+/* line 2122, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.slider .slides {
+  *zoom: 1;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* line 2128, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.slider .slides:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+/* line 2135, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.slider .slides li {
+  *zoom: 1;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  opacity: 0;
+}
+
+/* line 2142, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.slider .slides li:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+/* line 2149, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.slider .slides li.flex-active-slide {
+  opacity: 1;
+}
+
+/* line 2152, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.slider .slides li img {
+  max-width: 100%;
+}
+
+/* line 2155, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.slider .slide-caption {
+  width: 670px;
+  float: left;
+}
+
+@media screen and (max-width: 800px) {
+  /* line 2160, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .slider .slide-caption {
+    width: 100%;
+  }
+}
+/* line 2164, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.slider .slide-caption .slide-title {
+  color: white;
+  margin-bottom: 0;
+  font-family: "Cabin Sketch", "Roboto Slab", georgia, serif;
+  font-size: 60px;
+  font-size: 3.75rem;
+}
+
+/* line 2171, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.slider .slide-caption p {
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: white;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+/* line 2179, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.slider .flex-control-paging {
+  position: absolute;
+  bottom: 20px;
+  margin: 0;
+  padding-left: 0;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+  z-index: 9;
+}
+
+/* line 2189, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.slider .flex-control-paging li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  position: relative;
+}
+
+/* line 2200, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.slider .flex-control-paging li a {
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
+  text-indent: -99999px;
+  cursor: pointer;
+}
+
+/* line 2215, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.slider .flex-control-paging li a.flex-active {
+  background: #c4d1bb;
+  background: -webkit-linear-gradient(270deg, #c4d1bb, #aab9a0);
+  background: linear-gradient(180deg, #c4d1bb, #aab9a0);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* line 2222, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.page-title {
+  padding: 30px;
+}
+
+/* line 2225, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.page-title h2 {
+  font-size: 48px;
+  font-size: 3rem;
+  color: white;
+  margin: 0 0 20px;
+  font-family: "Cabin Sketch", "Roboto Slab", georgia, serif;
+  text-transform: uppercase;
+}
+
+/* line 2234, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.site-footer {
+  padding: 50px 0 20px;
+  background-image: url(/assets/chalkboard-3652a6f10e5b1668271a380bf03a1528366381cd147db009e132678430708939.jpg) center bottom;
+  background-attachment: fixed;
+  color: #c6d3bd;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+
+/* line 2242, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.site-footer .copy {
+  text-align: center;
+}
+
+/* line 2245, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.site-footer .widget-title {
+  color: white;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* line 2251, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.site-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 2255, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.site-footer .copy {
+  padding-top: 30px;
+}
+
+/* line 2259, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.request-form .field {
+  margin-bottom: 23px;
+}
+
+/* line 2262, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.request-form label {
+  width: 170px;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 2266, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .request-form label {
+    width: 100px;
+  }
+}
+/* line 2270, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.request-form input, .request-form select {
+  width: 100%;
+}
+
+/* line 2273, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.request-form .no-label {
+  padding-left: 170px;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 2277, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .request-form .no-label {
+    padding-left: 100px;
+  }
+}
+/* line 2281, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.request-form .no-label input {
+  margin-top: 20px;
+}
+
+/* line 2285, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.best-students-grid {
+  *zoom: 1;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  margin: 0 -10px;
+}
+
+/* line 2292, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.best-students-grid:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+/* line 2299, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.best-students-grid li {
+  width: 33.3333%;
+  float: left;
+  padding: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 2305, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+  .best-students-grid li {
+    width: 50%;
+  }
+}
+/* line 2309, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.best-students-grid li a {
+  display: block;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #c3cbbe;
+  color: #9ba396;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* line 2318, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.best-students-grid li img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 2324, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.best-students-grid .more-student {
+  line-height: 130px;
+  font-size: 18px;
+  font-size: 1.125rem;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 2332, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.posts {
+  list-style: none;
+  margin: 0 0 30px;
+  padding-left: 0;
+  border-top: 1px solid #d8ddd4;
+}
+
+/* line 2338, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.posts .post {
+  border-bottom: 1px solid #d8ddd4;
+  padding: 10px 0;
+  line-height: normal;
+}
+
+/* line 2343, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.posts .entry-title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin: 0 0 10px;
+  font-weight: 300;
+}
+
+/* line 2349, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.posts .entry-title a {
+  color: #719d51;
+  text-decoration: none;
+}
+
+/* line 2353, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.posts span {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #cad2c3;
+  font-weight: 300;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* line 2361, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.posts span [class^="icon-"] {
+  margin-right: 5px;
+}
+
+/* line 2365, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+article header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d8ddd6;
+  padding-bottom: 20px;
+}
+
+/* line 2370, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+article .entry-title {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0;
+  color: #777c73;
+}
+
+/* line 2377, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+article .entry-meta {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+/* line 2382, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+article .entry-meta span {
+  margin-right: 10px;
+  color: #8f9b86;
+}
+
+/* line 2386, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+article .entry-meta span [class^="icon-"] {
+  margin-right: 5px;
+}
+
+/* line 2389, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+article .featured-image {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+/* line 2394, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+article .featured-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* line 2400, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.actions {
+  padding: 20px 0;
+  border-top: 1px solid #d8ddd6;
+  border-bottom: 1px solid #d8ddd6;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* line 2407, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.actions a {
+  margin: 0 5px;
+}
+
+/* line 2411, /home/swati/Desktop/ruby project/demo/app/assets/stylesheets/style.scss */
+.leading {
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #777c73;
+  line-height: 1.5;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
