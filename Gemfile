@@ -13,10 +13,14 @@ gem 'city-state'
 gem 'pg', '~> 0.20'
 gem 'devise'
 
-
+gem 'carrierwave', '~> 1.0'
+gem "mini_magick"
+gem 'bootstrap-glyphicons'
 gem 'rolify'
 gem 'cancancan'
 gem 'stripe'
+gem 'magnific-popup-rails', '~> 1.1.0'
+
 
 
 # Use Puma as the app server

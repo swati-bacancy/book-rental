@@ -1,0 +1,43 @@
+<div class="col-md-6"> 
+  <div class="boxed-section request-form">
+    <%= link_to "view Address", addresses_path %>
+    <h2 class="section-title text-center">Enter Your Address</h2>
+      <%= form_for @address ,method: :post do |form|%>
+      <% if @address.errors.any? %>
+        <div id="error_explanation">
+           <h2><%= pluralize(@address.errors.count, "error") %> prohibited this message from being saved:</h2>
+           
+           <ul>
+             <%if(@address.errors.full_messages).each do |m|%> 
+             <li>
+               <%=m %>
+             </li>
+             <% end %>
+             <%end%>
+           </ul>
+        </div>
+      <% end %>
+      <%= form.label :Full_name%>
+      <%= form.text_field :full_name%>
+
+      <%= form.label :Address_line_1%>
+      <%= form.text_field :address_line1%>
+
+      <%= form.label :Address_line_1%>
+      <%= form.text_field :address_line2%>
+
+      <%= form.label :state%>
+      <%= form.select :state, CS.states(:in)%>
+
+      <div id='city-list' remote: true>
+        <%= render partial: 'city_list'%> <%#= f.text_field :city %> 
+      </div>
+      <%= form.label :country%>
+      <%= form.text_field :country%>      
+      <%= form.label :pincode%>
+      <%= form.text_field :pincode%>
+      <%= form.submit%>
+    <%end%>
+
+  </div>
+</div>
