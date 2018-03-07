@@ -6,7 +6,7 @@
         <div id="error_explanation">
            <h2><%= pluralize(@book.errors.count, "error") %> prohibited this message from being saved:</h2>
            <ul>
-             <% @book.errors.full_messages do |msg| %>
+             <% (@book.errors.full_messages).each do |msg| %>
              <% #Should have been: @location.errors.full_messages.each do |msg| %>
              <li>
                <%= msg %>
@@ -42,8 +42,11 @@
 
       <%=form.label :book_price_for_rent %>
       <%=form.text_field :book_price_for_rent %>
+
+      <%=form.label :Image_of_book %>
+      <%= form.file_field :bookImage, id: :picture_image %>
   </div>
- 
+
   <div class="boxed-section request-form"> 
     <h2 class="section-title text-center">View Addresses</h2>
     <table border="1">
@@ -74,3 +77,4 @@
   <%end%>
   </div>
 </div>
+

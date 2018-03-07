@@ -9,9 +9,11 @@
     @order = Order.new(order_params)
     @order.person_id=current_person.id
     @order.order_status=0  
-    @order.paymentStatus=0   
-    @order.save
+    @order.paymentStatus=0 
+    if @order.save
+      Notification.create(recipient: @book.person, actor: current_person, action: "Your book wants to buy", notifiable: @book)
 
+    end
     @book.status=0
     @book.save 
     redirect_to books_path

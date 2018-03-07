@@ -2,6 +2,7 @@
 <%= link_to 'Add Book', new_book_path%>
   <table border="1">
     <tr>
+      <th>Book Image</th>
       <th>Book name</th>
       <th>author name</th>
       <th>book_price</th>
@@ -16,9 +17,11 @@
       <th>delete</th>
       <th>Status</th>
       <th>Order detail</th>
+
    </tr>
    <% @books.each do |book| %>
     <tr>
+      <td><%= image_tag book.bookImage , :size => "100x80" %></td>
       <td><%= book.book_name%></td>
       <td><%= book.book_name%></td>
       <td><%= book.book_price%></td>
