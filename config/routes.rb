@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :people, controllers:{registrations: 'people/registrations'}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :addresses
   get 'books/viewallbooks'
   get 'orders/order_detail'
   # get 'addresses/confirm_order'

@@ -1,6 +1,6 @@
 class Address < ApplicationRecord
   belongs_to :person
-  has_one :order
+  has_one :order, dependent: :destroy
   has_one :book
   validates :full_name, :address_line1, :address_line2, :city, :state, :country, :pincode, presence: true
   #validates :pincode ,length: { is: 6 ,message: "must be given please"}

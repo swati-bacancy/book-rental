@@ -7,7 +7,7 @@ class AddressesController < ApplicationController
     @address=Address.new(address_params)
     @address.person_id= current_person.id
     if @address.save
-      redirect_to addresses_path
+      redirect_to address_path(@address)
     else
       render 'new'
     end  
