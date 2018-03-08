@@ -1,18 +1,22 @@
 <div class="boxed-section request-form" >
   <h2 class="section-title text-center">View books</h2>
-  <p>    
-    <%= form_tag  books_path , :method => 'get' do %>
-      <%= label_tag :seach_by_book_name%>
-      <%category_array= Category.all.map{|category| [category.category_name]}%>
-      <%= select_tag "category", options_for_select(category_array), { "style" => "width:200px"} %> 
-      <%= label_tag :seach_by_book_name%>
-      <%= text_field_tag :search, params[:search], options = {style:"width:200px"} %>
-  
-      <%= label_tag :seach_by_author_name%>
-      <%= text_field_tag :author_search, params[:author_search], options = {style:"width:200px"} %>
-      <%= submit_tag("search", :style => "width:100px;") %>
-    <%end%>
-  </p>
+   <p>    
+      <%= form_tag  books_path , :method => 'get' do %>
+        <%= label_tag :seach_by_book_name%>
+        <%category_array= Category.all.map{|category| [category.category_name]}%>
+        <%category_array=category_array.push("all")%>
+        <%= select_tag "category", options_for_select(category_array), { "style" => "width:200px"} %>
+
+
+        
+          <%= label_tag :seach_by_book_name%>
+          <%= text_field_tag :search, params[:search], options = {style:"width:200px"} %>
+      
+          <%= label_tag :seach_by_author_name%>
+          <%= text_field_tag :author_search, params[:author_search], options = {style:"width:200px"} %>
+          <%= submit_tag("search", :style => "width:100px;") %>
+        <%end%>
+    </p>
   <%= button_to "near me",  near_by_me_path , method: :get, style:"width:200px"  %>
   <table border="1">
     <tr>

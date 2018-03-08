@@ -4,11 +4,12 @@ class ChargesController < ApplicationController
 
   def create
     # Amount in cents
-    @amount = 500
-     @order_id= params[:charges][:order_id]
-     @order=Order.find(@order_id)
-     @order.paymentStatus=1
-     @order.save
+    
+    @order_id= params[:charges][:order_id]
+    @order=Order.find(@order_id)
+    @order.paymentStatus=1
+    @order.save
+     amount = @order.book.book_price_for_rent.to_i
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
       :source  => params[:stripeToken]
