@@ -54,7 +54,6 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 end
-
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
@@ -63,6 +62,11 @@ group :development do
   gem 'spring'
   
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-passenger',   require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
